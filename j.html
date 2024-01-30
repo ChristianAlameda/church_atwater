@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="img/church-logo.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="img/noah.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="img/screaming_sun.jpg" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Change slide every 5 seconds (adjust as needed)
+        setInterval(nextSlide, 5000);
+
+        // Initial display
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
