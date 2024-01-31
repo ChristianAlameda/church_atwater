@@ -1,182 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/style.css">
-        <link rel="stylesheet" href="../style/button.css">
-
-        <title>Atwater Church</title>
-        <style>
-            body {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                overflow: hidden;
-            }
-
-            .page1 {
-                width: 80%;
-                text-align: center;
-                border: 2px solid black;
-            }
-
-            .church-logo,
-            .item-list,
-            .navbar,
-            .watch-now,
-            .church-info,
-            .church-name,
-            .church-location,
-            .church-time,
-            .church-new,
-            .church-old {
-                margin: 10px;
-            }
-
-            .navbar {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .church-info {
-                display: inline-block;
-                text-align: center;
-            }
-
-            .church-new,
-            .church-old {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .slideshow-container {
-              width: 100%;
-              height: 100vh;
-              position: relative;
-            }
-  
-            .slide {
-                display: none;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/button.css">
     
-            .slide img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        </style>
-        <script>
-            function navigateToPage1(url) {
-                window.location.href = url;
-            }
-            function navigateToPage2(url) {
-                window.location.href = url;
-            }
-            function navigateToPage3(url) {
-                window.location.href = url;
-            }
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.slide');
+    <title>Atwater Church</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            /*flex-direction: column;*/
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            transition: background-image 1s ease-in-out;
+        }
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.style.display = (i === index) ? 'block' : 'none';
-                });
-            }
+        /*.page1 {
+            width: 80%;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }*/
 
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
+        .church-logo,
+        .item-list,
+        .navbar,
+        .watch-now,
+        .church-info,
+        .church-name,
+        .church-location,
+        .church-time,
+        .church-new,
+        .church-old {
+            margin: 10px;
+        }
 
-            // Change slide every 5 seconds (adjust as needed)
-            setInterval(nextSlide, 5000);
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-            // Initial display
-            showSlide(currentSlide);
-        </script>
-    </head>
-    <body>
+        .church-info {
+            display: inline-block;
+            text-align: center;
+            color: #eeff00
+        }
+
+        .church-new,
+        .church-old {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         
-      <div class="slideshow-container">
+        .slideshow-container {
+            display: none;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        let currentSlide = 0;
+        const backgrounds = [
+            'url("../img/church-logo.jpg")',
+            'url("../img/noah.jpg")',
+            'url("../img/screaming_sun.jpg")'
+            // Add more image URLs as needed
+        ];
+
+        function nextBackground() {
+            currentSlide = (currentSlide + 1) % backgrounds.length;
+            document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
+        }
+
+        // Change background every 3 seconds
+        setInterval(nextBackground, 3000);
+
+        // Initial display
+        document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
+
+        function navigateToPage1(url) {
+            window.location.href = url;
+        }
+
+        function navigateToPage2(url) {
+            window.location.href = url;
+        }
+
+        function navigateToPage3(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <div class="page1">
+        
+        <div class="navbar">
+            <div class="church-logo">
+                <img src="../img/church-logo.jpg" alt="church logo of atwater" width="100" height="100"> 
+            </div>
+    
+            <ul class="item-list">
+    
+                <li class="dropdown">
+                    <a href="#">I'm New</a>
+                    <div class="dropdown-content">
+                        <a href="/who-we-are">Who We Are</a>
+                        <a href="/service-times-directions">Service Times Directions</a>
+                        <a href="/what-we-believe">What We Believe</a>
+                    </div>
+                </li>
             
-            <div class="slide">
-                <img src="../img/church-logo.jpg" alt="Slide 1">
-            </div>
-            <div class="slide">
-                <img src="../img/noah.jpg" alt="Slide 2">
-            </div>
-            <div class="slide">
-                <img src="../img/screaming_sun.jpg" alt="Slide 3">
-            </div>
-            <!-- Add more slides as needed -->
-        
+                <li class="dropdown">
+                    <a href="#">Next Steps</a>
+                    <div class="dropdown-content">
+                        <a href="/get-connected">Get Connected</a>
+                        <a href="/baptism">Baptism</a>
+                        <a href="/help-out">Help Out</a>
+                    </div>
+    
+                </li>
+    
+                <li><a href="/events">Events</a></li>
+                <li><a href="/give">Give</a></li>
+    
+            </ul>
 
-            <div class="navbar">
-                <div class="church-logo">
-                    <img src="../img/church-logo.jpg" alt="church logo of atwater" width="100" height="100"> 
-                </div>
+            <div class="watch-now">
+                <!-- Need the link to the zoom when it happens -->
+                <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
 
-                <ul class="item-list">
-                    <li class="dropdown">
-                        <a href="#">I'm New</a>
-                        <div class="dropdown-content">
-                            <a href="/who-we-are">Who We Are</a>
-                            <a href="/service-times-directions">Service Times Directions</a>
-                            <a href="/what-we-believe">What We Believe</a>
-                        </div>
-                    </li>
-                
-                    <li class="dropdown">
-                        <a href="#">Next Steps</a>
-                        <div class="dropdown-content">
-                            <a href="/get-connected">Get Connected</a>
-                            <a href="/baptism">Baptism</a>
-                            <a href="/help-out">Help Out</a>
-                        </div>
-                    </li>
+                <!--<a href="/watch">WATCH NOW?</a>-->
 
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/give">Give</a></li>
-                </ul>
-
-                <div class="watch-now">
-                    <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')">
-                        <span class="text">WATCH NOW</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="church-info">
-                <div class="church-name">
-                    Nazarene Church
-                </div>
-                <div class="church-location">
-                    ATWATER
-                </div>
-                <div class="church-time">
-                    SUNDAY 9:30 AM - 11:30 AM
-                </div>
-                <div class="church-new">
-                    <button class="button-64" role="button" onclick="navigateToPage2('/new.html')">
-                        <span class="text">WATCH NOW</span>
-                    </button>
-                </div>
-                <div class="church-old">
-                    <button class="button-64" role="button" onclick="navigateToPage3('/bulletin.html')">
-                        <span class="text">WATCH NOW</span>
-                    </button>
-                </div>
             </div>
         </div>
-    </body>
+
+        <div class="church-info">
+            <div class="church-name">
+                Nazarene Church
+            </div>
+            <div class="church-location">
+                ATWATER
+            </div>
+            <div class="church-time">
+                SUNDAY 9:30 AM - 11:30 AM
+            </div>
+            <div class="church-new">
+                <button class="button-64" role="button" onclick="navigateToPage2('/new.html')"><span class="text">WATCH NOW</span></button>
+            </div>
+            <div class="church-old">
+                <button class="button-64" role="button" onclick="navigateToPage3('/bulletin.html')"><span class="text">WATCH NOW</span></button>
+            </div>
+        </div>
+    
+    </div>
+</body>
 </html>
