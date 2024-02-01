@@ -6,38 +6,9 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/button.css">
     
+
     <title>Atwater Church</title>
     <style>
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            transition: background-image 1s ease-in-out;
-            background-color:#070035
-        }
-
-        .church-logo,
-        .item-list,
-        .navbar,
-        .watch-now,
-        .church-info,
-        .church-name,
-        .church-location,
-        .church-time,
-        .church-new,
-        .church-old {
-            margin: 10px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         .church-info {
             margin: 5%;
             text-align: center;
@@ -51,30 +22,11 @@
             align-items: center;
         }
 
-        .page1 {
-            background-image: url('../img/church-picture.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            width: 100%; /* Set width to cover the full viewport */
-        }
-
         .contact-info {
             display: flex;
             color: #eeff00;
             background-color: rgba(120, 120, 120,.9);
     
-        }
-        .phone, 
-        .location,
-        .email, 
-        .youtube, 
-        .facebook{
-            margin-left:10px;
         }
         
         .mission {
@@ -84,11 +36,6 @@
             margin: 0 auto; /* Center the div horizontally */
             width: 50%; /* Set the width to cover the middle two-fourths of the screen */
           }
-        
-        .notes{
-            color:yellow;
-
-        }
 
         .slideshow {
             background-image: url('../img/church-picture.jpg');
@@ -101,24 +48,6 @@
             flex-grow: 1;
             width: 100%; /* Set width to cover the full viewport */
             
-        }
-
-        .heading1 {
-            color: #333;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        
-        .heading2 {
-            color: #555;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .description {
-            color: #777;
-            font-size: 18px;
-            line-height: 1.5;
         }
 
         .service-times {
@@ -146,47 +75,7 @@
             font-style: italic;
             color: #555;
         }
-        
-          
-          
     </style>
-    <script>
-        let currentSlide = 0;
-        const backgrounds = [
-            'url("../img/church-logo.jpg")',
-            'url("../img/church-pastor1.jpg")',
-            'url("../img/church-pastor2.jpg")',
-            //'url("../img/church-pastor3.jpg")',
-
-            // Add more image URLs as needed
-        ];
-
-        function nextBackground() {
-            currentSlide = (currentSlide + 1) % backgrounds.length;
-            document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
-        }
-
-        // Change background every 3 seconds
-        setInterval(nextBackground, 3000);
-
-        // Initial display
-        document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
-
-        /////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////
-        function navigateToPage1(url) {
-            window.location.href = url;
-        }
-
-        function navigateToPage2(url) {
-            window.location.href = url;
-        }
-
-        function navigateToPage3(url) {
-            window.location.href = url;
-        }
-
-    </script>
 </head>
 <body>
     <div class="contact-info">
@@ -211,27 +100,29 @@
     <div class="page1">
         <div class="navbar">
             <div class="church-logo">
-                <img src="../img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100"> 
+                <a href="/">
+                    <img src="../img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
+                </a>
             </div>
             <ul class="item-list">
                 <li class="dropdown">
                     <a href="#">I'm New</a>
                     <div class="dropdown-content">
-                        <a href="/who-we-are">Who We Are</a>
-                        <a href="/service-times-directions">Service Times Directions</a>
-                        <a href="/what-we-believe">What We Believe</a>
+                        <a href="../index/who-we-are.html">Who We Are</a>
+                        <a href="#service-times">Service Times</a>
+                        <a href="../index/what-we-believe.html">What We Believe</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <a href="#">Next Steps</a>
                     <div class="dropdown-content">
-                        <a href="/get-connected">Get Connected</a>
-                        <a href="/baptism">Baptism</a>
-                        <a href="/help-out">Help Out</a>
+                        <a href="../index/get-connected.html">Get Connected</a>
+                        <a href="../index/baptism.html">Baptism</a>
+                        <a href="../index/help-out.html">Help Out</a>
                     </div>
                 </li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/give">Give</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="../index/give.html">Give</a></li>
             </ul>
             <div class="watch-now">
                 <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
@@ -250,29 +141,11 @@
         </div>
     </div>
     <!--SLIDESHOW-->
-    <script>
-        let curr = 0
-        const happenings = [
-            'url("../img/church-saturday.jpg")',
-            'url("../img/church-sunday.jpg")'
-            // Add more image URLs as needed
-        ];
-        // SAME THING BUT FOR THE SECOND SLIDESHOW
-        function nextBackground1() {
-            curr = (curr + 1) % happenings.length;
-            document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
-        }
-
-        // Change background every 6 seconds
-        setInterval(nextBackground1, 6000);
-
-        // Initial display
-        document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
-    </script>
+    
     <h1 class="notes">
         WEEKLY, MONTHLY, AND ANNUAL EVENTS
     </h1>
-    <div class="slideshow"></div>
+    <div class="slideshow" id="events"></div>
     <!--MISSION-->
     <h1 class="notes">MISSION STATEMENT</h1>
     <div class="mission">
@@ -288,7 +161,7 @@
         </h2>
     </div>
     <!--SERVICE TIMES-->
-    <div class="service-times">
+    <div class="service-times" id="service-times">
         <div class="service-times-title">
             SERVICE TIMES
         </div>
@@ -319,5 +192,56 @@
             </div>
         </div>
     </div>
+    <script>
+        let currentSlide = 0;
+        const backgrounds = [
+            'url("../img/church-logo.jpg")',
+            'url("../img/church-pastor1.jpg")',
+            'url("../img/church-pastor2.jpg")',
+            //'url("../img/church-pastor3.jpg")',
+
+            // Add more image URLs as needed
+        ];
+
+        function nextBackground() {
+            currentSlide = (currentSlide + 1) % backgrounds.length;
+            document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
+        }
+
+        // Change background every 3 seconds
+        setInterval(nextBackground, 3000);
+
+        // Initial display
+        document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
+        
+        ////////////////////////////////////////////
+        ////////////////////////////////////////////
+        ////////////////////////////////////////////
+        ////////////////////////////////////////////
+        ////////////////////////////////////////////
+        ////////////////////////////////////////////
+
+        //SLIDESHOW2: index.html
+        let curr = 0
+        const happenings = [
+            'url("../img/church-saturday.jpg")',
+            'url("../img/church-sunday.jpg")'
+            // Add more image URLs as needed
+        ];
+        // SAME THING BUT FOR THE SECOND SLIDESHOW
+        function nextBackground1() {
+            curr = (curr + 1) % happenings.length;
+            document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
+        }
+
+        // Change background every 6 seconds
+        setInterval(nextBackground1, 6000);
+
+        // Initial display
+        document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
+    
+    
+    </script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

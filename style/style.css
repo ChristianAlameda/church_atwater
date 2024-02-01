@@ -1,27 +1,6 @@
-/*
-llllllllllllllllllllllllllllllllllllllllllllllll
-llllllllllllllllllllllllllllllllllllllllllllllll
-llllllllllllllllllllllllllllllllllllllllllllllll
-llllllllllllllllllllllllllllllllllllllllllllllll
-llllllllllllllllllllllllllllllllllllllllllllllll
+/* 
+FOR THE DROP DOWN
 */
-
-/*CHRISTIAN*/
-
-/* html{
-    background-color:black;
-} */
-.page1{
-    background-image: url('../img/church-picture.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -72,5 +51,94 @@ li a:hover {
 
 .dropdown-content a:hover {
     background-color: #ddd;
+}
+
+/* 
+BODY 
+*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-image 1s ease-in-out;
+    background-color:#070035
+}
+
+/* 
+NAVBAR / CONTACT-INFO
+*/
+.church-logo,
+.item-list,
+.navbar,
+.watch-now,
+.church-info,
+.church-name,
+.church-location,
+.church-time,
+.church-new,
+.church-old {
+    margin: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    color: #eeff00;
+    background-color: rgba(120, 120, 120,.9);
+
+}
+
+.phone, 
+.location,
+.email, 
+.youtube, 
+.facebook{
+    margin-left:10px;
+}
+
+/* 
+THINGS I WOULD LIKE TO SEE ON OTHER PAGES 
+SO WE LOOK UNIFORM
+*/
+.page1 {
+    background-image: url('../img/church-picture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%; /* Set width to cover the full viewport */
+}
+
+.notes{
+    color:yellow;
+}
+
+.heading1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.heading2 {
+    color: #555;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
