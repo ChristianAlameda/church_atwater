@@ -6,6 +6,56 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/button.css">
     <title>Atwater Church</title>
+    <style>
+        .all {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .background {
+            background-color: rgba(65, 181, 235, 0.7); /* Set background color for the edges */
+            align-content: center;
+            display:block;
+            padding: 20px;
+            margin-top: 20px; /* Add some space between the top content and bottom portion */
+            max-width: 60%; /* Set maximum width to hold the 3rd to 9th portions */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+        .heading {
+            text-align:center;
+            font-size: 2em;
+            color: #fff; /* Set text color to white */
+            margin-bottom: 20px; /* Add some space below the heading */
+        }
+        
+        /* Additional styles for a cool effect, you can adjust these as needed */
+        .heading::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #fff; /* Set line color to white */
+            margin: 10px auto; /* Center the line and add space around it */
+        }
+
+        .description {
+            color: #333; /* Set text color to a dark shade, you can adjust this value */
+            margin-bottom: 10px; /* Add some space below each description */
+        }
+        
+        /* Additional styles for a cool effect, you can adjust these as needed */
+        .description::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #333; /* Set line color to a dark shade */
+            margin: 5px 0; /* Add space around the line */
+        }
+        
+        
+    </style>
 </head>
 <body>
     <div class="contact-info">
@@ -58,7 +108,81 @@
                 <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
             </div>
         </div>
-    </div>
+        <!-- START OF PAGE -->
+        <div class="all">
+            <div class="background">
+                <h1 class="heading">What Makes US, US</h1>
+                <div class="big">
+                    <div class="heading1">
+                        What We Believe
+                    </div>
+                    <div class="small">
+                        <div class="description">
+                            <strong>We believe</strong> in one God-the Father, Son, and Holy Spirit.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that the Old and New Testament Scriptures, given by plenary inspiration, contain all truth necessary to faith and Christian living.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that man is born with a fallen nature, and is, therefore, inclined to evil, and that continually.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that the finally impenitent are hopelessly and eternally lost.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that the atonement through Jesus Christ is for the whole human race; and that whosoever repents and believes on the Lord Jesus Christ is justified and regenerated and saved from the dominion of sin.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that believers are to be sanctified wholly, subsequent to regeneration, through faith in the Lord Jesus Christ.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that the Holy Spirit bears witness to the new birth, and also to the entire sanctification of believers.
+                        </div><br>
+                        <div class="description">
+                            <strong>We believe</strong> that our Lord will return, the dead will be raised, and the final judgment will take place.
+                        </div>
+                        
+                    </div>
+                </div>    
+    
+                <!-- OUR CORE VALUES -->
+                <div class="big">
+                    <div class="heading1">
+                        Our Core Values
+                    </div>
+                    <div class="small">
+                        <div class="heading2">
+                            We Are a Christian People
+                        </div>
+                        <div class="description">
+                            As members of the Church Universal, we join with all true believers 
+                            in proclaiming the Lordship of Jesus Christ and in embracing the historic 
+                            Trinitarian creedal statements of Christian faith. We value our Wesleyan-Holiness 
+                            heritage and believe it to be a way of understanding the faith that is true to 
+                            Scripture, reason, tradition, and experience.
+                        </div>
+                    </div>
+                    <div class="small">
+                        <div class="heading2">
+                            We Are a Holiness People
+                        </div>
+                        <div class="description">
+                            God, who is holy, calls us to a life of holiness. We believe that the Holy Spirit seeks to do in us a second work of grace, called by various terms including “entire sanctification” and “baptism with the Holy Spirit”-cleansing us from all sin, renewing us in the image of God, empowering us to love God with our whole heart, soul, mind, and strength, and our neighbors as ourselves, and producing in us the character of Christ. Holiness in the life of believers is most clearly understood as Christlikeness.
+                        </div>
+                    </div>
+                    <div class="small">
+                        <div class="heading2">
+                            We Are a Missional People
+                        </div>
+                        <div class="description">
+                            We are a sent people, responding to the call of Christ and empowered by the Holy Spirit to go into all the world, witnessing to the Lordship of Christ and participating with God in the building of the Church and the extension of His kingdom (Matthew 28:19-20; 2 Corinthians 6:1). Our mission (a) begins in worship, (b) ministers to the world in evangelism and compassion, (c) encourages believers toward Christian maturity through discipleship, and (d) prepares women and men for Christian service through Christian higher education.
+                            For more information visit <a href="http://www.nazarene.org">http://www.nazarene.org</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div><br><br>
     <script src="../js/script.js"></script>
 </body>
 </html>
