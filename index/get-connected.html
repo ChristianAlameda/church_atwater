@@ -5,7 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/button1.css">
     <title>Atwater Church</title>
+    <style>
+         /* Style for the background class */
+        .background {
+            background-color: #e6e6e6; /* Set your desired background color */
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Style for the heading1 class */
+        .heading1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        /* Style for the mini-heading class */
+        .mini-heading {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Style for the explanation class */
+        .explanation {
+            line-height: 1.6;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Style for the jobs class */
+        .jobs {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style for the job-title class */
+        .jobs a.job-title {
+            font-weight: bold;
+            color: #333; /* You can customize the color as needed */
+        }
+
+        /* Style for the job-description class */
+        .jobs .job-description {
+            margin-top: 5px;
+            color: #666; /* You can customize the color as needed */
+        }
+
+        /* Style for the job-title class */
+        .jobs a.job-title {
+            font-weight: bold;
+            color: #333; /* You can customize the color as needed */
+            text-decoration: underline; /* Add underline for less evident link */
+            cursor: pointer; /* Change cursor on hover for interactivity */
+        }
+
+        .jobs a.job-title:hover {
+            color: #0066cc; /* Change color on hover for interactivity */
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+    </style>
 </head>
 <body>
     <div class="contact-info">
@@ -58,10 +125,41 @@
                 <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
             </div>
         </div>
-    </div>
-    <!-- START OF PAGE -->
+        <!-- START OF PAGE -->
+        <div class="picture">
+            <div class="heading">
+                GET CONNECTED
+            </div>
+        </div>
+        <div class="background">
+            <div class="heading1">
+                Get Connected
+            </div>
+            <div class="mini-heading">
     
-
+            </div>
+            <div class="explanation">
+                The essence of a church lies in its community. 
+                It's often stated that when three or more individuals 
+                come together, a church is formed, and it becomes a 
+                sacred space where God is present, attentively listening
+                 to their prayers. This concept is rooted in the 
+                 understanding that human connection is fundamental, 
+                 emphasizing that it is not beneficial for individuals 
+                 to be alone.
+            </div>
+            <div class="jobs">
+                <button class="button-79" role="button" onclick="navigateToPage1('../index/jobs/banana.html')"><span class="text">SUNDAY CHURCH</span></button>
+                <div class="job-description">
+                    9:30 AM - 10:30 AM <br>
+                    We gather and address some sort of passage and ask question 
+                    and converse to truly understand it. 
+                    <br>
+                    This is a safe place to ask questions and meet new people
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../js/script.js"></script>
 </body>
 </html>

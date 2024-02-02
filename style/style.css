@@ -141,4 +141,21 @@ SO WE LOOK UNIFORM
     font-size: 18px;
     line-height: 1.5;
 }
+/* 
+Picture at top of all html files in index folder and jobs
+*/
+.picture {
+    text-align: center;
+    margin-top: 20px;
+    background-image: url('../img/church-sunday.jpg');
+    background-size: cover; /* Adjust the background size as needed */
+    height: 300px; /* Adjust the height as needed */
+}
+
+/* Style for the heading class */
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
 
