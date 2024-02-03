@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="../../style/form.css">
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            Joining X group
+        </div>
+        <form action="htmlTOcsv.php" method="POST" onsubmit="return validateForm()">
+            <div class="box">
+                <div class="first-name-title">First Name* (John)</div>
+                <input class="first-name" type="text" name="first-name" id="first-name">
+            </div>
+            <div class="box">
+                <div class="last-name-title">Last Name* (Doe)</div>
+                <input class="last-name" type="text" name="last-name" id="last-name">
+            </div>
+            
+            <div class="box">
+                <div class="phone-title">Phone* (012-345-6789)</div>
+                <input class="phone" type="text" name="phone" id="phone">
+            </div>
+            
+            <div class="box">
+                <div class="email-title">Email* (jdoe@gmail.com)</div>
+                <input class="email" type="text" name="email" id="email">
+            </div>
+            
+            <div class="why-join-box">
+                <div class="why-join-title">
+                    Why do you want to join? (OPTIONAL)
+                </div>
+                <textarea class="why-join" name="why-join" id="why-join" rows="4"></textarea>
+            </div>
+
+            <div class="warning">
+                Neighborhood Church Chico needs the contact information you provide to us to contact you about our services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our 
+                <a href="http://www.ncchico.org/privacy-policy/">Privacy Policy.</a>
+            </div>
+            
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <script>
+            function validateForm() {
+                var firstNameInput = document.getElementById('first-name');
+                var lastNameInput = document.getElementById('last-name');
+                var phoneInput = document.getElementById('phone');
+                var emailInput = document.getElementById('email');
+                
+                // Check if any of the required fields are empty
+                if (
+                    firstNameInput.value.trim() === '' ||
+                    lastNameInput.value.trim() === '' ||
+                    phoneInput.value.trim() === '' ||
+                    emailInput.value.trim() === ''
+                ) {
+                    alert("Please fill in all required fields.");
+                    return false;
+                }
+
+                // Simple phone number validation (allowing only digits and hyphens)
+                var phoneRegex = /^[\d-]+$/;
+                if (!phoneRegex.test(phoneInput.value)) {
+                    alert("Please enter a valid phone number (digits and hyphens only).");
+                    return false;
+                }
+
+                // Simple email validation
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+
+                // Redirect to the main page on successful submission
+                alert("Form submitted successfully!");
+                window.location.href = "/"; // Replace with the actual path to your main page
+
+                return false; // Prevents the form from submitting if redirection doesn't happen
+            }
+        </script>
+    </div>
+</body>
+</html>
