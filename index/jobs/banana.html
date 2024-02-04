@@ -6,12 +6,13 @@
     <title>form</title>
     <link rel="stylesheet" href="../../style/form.css">
 </head>
+
 <body>
     <div class="background">
         <div class="header">
             Joining X group
         </div>
-        <form action="htmlTOcsv.php" method="POST" onsubmit="return validateForm()">
+        <form action="submitForm.js" method="post" onsubmit="return validateForm()">
             <div class="box">
                 <div class="first-name-title">First Name* (John)</div>
                 <input class="first-name" type="text" name="first-name" id="first-name">
@@ -80,11 +81,10 @@
                     return false;
                 }
 
-                // Redirect to the main page on successful submission
+                // Alert and redirect (if needed)
                 alert("Form submitted successfully!");
-                window.location.href = "/"; // Replace with the actual path to your main page
+                return false; // Prevent form submission
 
-                return false; // Prevents the form from submitting if redirection doesn't happen
             }
         </script>
     </div>
