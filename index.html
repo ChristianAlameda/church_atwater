@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/button.css">
     
 
     <title>Atwater Church</title>
@@ -38,7 +38,7 @@
           }
 
         .slideshow {
-            background-image: url('../img/church-picture.jpg');
+            background-image: url('./img/church-logo.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -100,29 +100,29 @@
     <div class="page1">
         <div class="navbar">
             <div class="church-logo">
-                <a href="/">
-                    <img src="../img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
+                <a href="./index.html">
+                    <img src="./img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
                 </a>
             </div>
             <ul class="item-list">
                 <li class="dropdown">
                     <a href="#">I'm New</a>
                     <div class="dropdown-content">
-                        <a href="../index/who-we-are.html">Who We Are</a>
+                        <a href="./index/who-we-are.html">Who We Are</a>
                         <a href="#service-times">Service Times</a>
-                        <a href="../index/what-we-believe.html">What We Believe</a>
+                        <a href="./index/what-we-believe.html">What We Believe</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <a href="#">Next Steps</a>
                     <div class="dropdown-content">
-                        <a href="../index/get-connected.html">Get Connected</a>
-                        <a href="../index/baptism.html">Baptism</a>
-                        <a href="../index/help-out.html">Help Out</a>
+                        <a href="./index/get-connected.html">Get Connected</a>
+                        <a href="./index/baptism.html">Baptism</a>
+                        <a href="./index/help-out.html">Help Out</a>
                     </div>
                 </li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="../index/give.html">Give</a></li>
+                <li><a href="./index/give.html">Give</a></li>
             </ul>
             <div class="watch-now">
                 <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
@@ -133,10 +133,10 @@
             <div class="church-location">ATWATER</div>
             <div class="church-time">SUNDAY 9:30 AM - 11:30 AM</div>
             <div class="church-new">
-                <button class="button-64" role="button" onclick="navigateToPage2('/index/what-we-believe.html')"><span class="text">NEW? START HERE</span></button>
+                <button class="button-64" role="button" onclick="navigateToPage2('./index/what-we-believe.html')"><span class="text">NEW? START HERE</span></button>
             </div>
             <div class="church-old">
-                <button class="button-64" role="button" onclick="navigateToPage3('/index/get-connected.html')"><span class="text">OLD? SEE WHAT'S HAPPENING</span></button>
+                <button class="button-64" role="button" onclick="navigateToPage3('./index/get-connected.html')"><span class="text">OLD? SEE WHAT'S HAPPENING</span></button>
             </div>
         </div>
     </div>
@@ -195,9 +195,9 @@
     <script>
         let currentSlide = 0;
         const backgrounds = [
-            'url("../img/church-logo.jpg")',
-            'url("../img/church-pastor1.jpg")',
-            'url("../img/church-pastor2.jpg")',
+            'url("./img/church-logo.jpg")',
+            'url("./img/church-pastor1.jpg")',
+            'url("./img/church-pastor2.jpg")',
             //'url("../img/church-pastor3.jpg")',
 
             // Add more image URLs as needed
@@ -224,8 +224,8 @@
         //SLIDESHOW2: index.html
         let curr = 0
         const happenings = [
-            'url("../img/church-saturday.jpg")',
-            'url("../img/church-sunday.jpg")'
+            'url("./img/church-saturday.jpg")',
+            'url("./img/church-sunday.jpg")'
             // Add more image URLs as needed
         ];
         // SAME THING BUT FOR THE SECOND SLIDESHOW
@@ -242,6 +242,6 @@
     
     
     </script>
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
