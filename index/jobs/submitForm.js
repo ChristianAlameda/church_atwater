@@ -1,31 +1,45 @@
-// submitForm.js
+function submitForm(firstNameInput,lastNameInput, phoneInput,emailInput,whyJoin){
+    const fs = require('fs');
 
-// Function to handle form submission
-function submitForm() {
-    // Retrieve form data
-    var firstName = document.getElementById('first-name').value;
-    var lastName = document.getElementById('last-name').value;
-    var phone = document.getElementById('phone').value;
-    var email = document.getElementById('email').value;
-    var whyJoin = document.getElementById('why-join').value;
+    // Existing file path
+    const existingFilePath = 'out-big.csv';
 
-    // Organize the form data as a CSV string
-    var csvData = '"' + firstName + '","' + lastName + '","' + phone + '","' + email + '","' + whyJoin + '"\n';
+    // New data to append
+    var newData = [
+        firstNameInput,lastNameInput, phoneInput,emailInput,whyJoin
+    ];
 
-    // Perform AJAX request to save the data to the server
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'saveFormData.php', true); // Replace 'saveFormData.php' with the appropriate server-side script
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            // Form submitted successfully
-            alert("Form submitted successfully!");
-            window.location.href = "home.html"; // Redirect to home page
+    // Read existing CSV file content
+    fs.readFile(existingFilePath, 'utf8', (err, existingData) => {
+        if (err) {
+            console.error('Error reading existing file:', err);
+            return;
         }
-    };
-    
-    // Send the CSV data to the server
-    xhr.send('csvData=' + encodeURIComponent(csvData));
 
-    return false; // Prevent form submission
+        // Parse existing CSV data
+        var existingArray = existingData.trim().split('\n').map(row => row.split(','));
+
+        // Append the new data to the existing array
+        existingArray.push(newData);
+
+        // Convert the updated array to CSV format
+        var updatedCsv = existingArray.map(row => row.join(',')).join('\n');
+
+        // Save the updated CSV content back to the file
+        fs.writeFile(existingFilePath, updatedCsv, 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing to file:', err);
+            } else {
+                console.log('Data appended successfully.');
+            }
+        });
+    });
 }
+
+submitForm(
+    'Joe',
+    'Alameda',
+    23,
+    '1@gmail.com',
+    'because'
+)

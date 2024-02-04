@@ -12,7 +12,7 @@
         <div class="header">
             Joining X group
         </div>
-        <form action="submitForm.js" method="post" onsubmit="return validateForm()">
+        <form action="/"  onsubmit="return validateForm()">
             <div class="box">
                 <div class="first-name-title">First Name* (John)</div>
                 <input class="first-name" type="text" name="first-name" id="first-name">
@@ -48,13 +48,13 @@
                 <input type="submit" value="Submit">
             </div>
         </form>
-
         <script>
             function validateForm() {
                 var firstNameInput = document.getElementById('first-name');
                 var lastNameInput = document.getElementById('last-name');
                 var phoneInput = document.getElementById('phone');
                 var emailInput = document.getElementById('email');
+                var whyJoin = document.getElementById('why-join');
                 
                 // Check if any of the required fields are empty
                 if (
@@ -81,11 +81,60 @@
                     return false;
                 }
 
-                // Alert and redirect (if needed)
+                submitForm(firstNameInput,
+                            lastNameInput,
+                            phoneInput,
+                            emailInput,
+                            whyJoin);
+
                 alert("Form submitted successfully!");
-                return false; // Prevent form submission
+                submitForm(firstNameInput,
+                            lastNameInput,
+                            phoneInput,
+                            emailInput,
+                            whyJoin);
+                window.location.href = "index.html"; 
+
 
             }
+            function submitForm(firstNameInput,lastNameInput, phoneInput,emailInput,whyJoin){
+                const fs = require('fs');
+            
+                // Existing file path
+                const existingFilePath = 'out-big.csv';
+            
+                // New data to append
+                var newData = [
+                    firstNameInput,lastNameInput, phoneInput,emailInput,whyJoin
+                ];
+            
+                // Read existing CSV file content
+                fs.readFile(existingFilePath, 'utf8', (err, existingData) => {
+                    if (err) {
+                        console.error('Error reading existing file:', err);
+                        return;
+                    }
+            
+                    // Parse existing CSV data
+                    var existingArray = existingData.trim().split('\n').map(row => row.split(','));
+            
+                    // Append the new data to the existing array
+                    existingArray.push(newData);
+            
+                    // Convert the updated array to CSV format
+                    var updatedCsv = existingArray.map(row => row.join(',')).join('\n');
+            
+                    // Save the updated CSV content back to the file
+                    fs.writeFile(existingFilePath, updatedCsv, 'utf8', (err) => {
+                        if (err) {
+                            console.error('Error writing to file:', err);
+                        } else {
+                            console.log('Data appended successfully.');
+                        }
+                    });
+                });
+            }
+            
         </script>
     </div>
 </body>
