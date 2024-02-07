@@ -25,13 +25,7 @@ class MyFlaskApp:
         self.database = Database()
         self.database.connect()
         self.database.checkIfEmpty()
-    
-    
-        
 
-
-
-    
     ######################################
     ######################################
     ############# ACTUAL APP #############
