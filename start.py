@@ -18,8 +18,24 @@ class MyFlaskApp:
 
         ### APP ROUTES ###
         # HOME
-        self.app.add_url_rule('/', 'index', self.index)   # NOTE: Changed to home from /
         
+        self.app.add_url_rule('/', 'index', self.index)
+        self.app.add_url_rule('/whatWeBelieve', 'whatWeBelieve', self.whatWeBelieve)
+        self.app.add_url_rule('/whoWeAre', 'whoWeAre', self.whoWeAre)
+        
+        self.app.add_url_rule('/baptism', 'baptism', self.baptism)
+        self.app.add_url_rule('/baptismForm', 'baptismForm', self.baptismForm)
+        
+        self.app.add_url_rule('/getConnected', 'getConnected', self.getConnected)
+        self.app.add_url_rule('/getConnectedForm', 'getConnectedForm', self.getConnectedForm)
+        
+        
+        self.app.add_url_rule('/give', 'give', self.give)
+        self.app.add_url_rule('/giveForm', 'giveForm', self.tithingForm)
+        
+        self.app.add_url_rule('/helpOut', 'helpOut', self.helpOut)
+        self.app.add_url_rule('/helpOutFormJob1', 'helpOutFormJob1', self.helpOutFormJob1)
+        self.app.add_url_rule('/helpOutFormJob2', 'helpOutFormJob2', self.helpOutFormJob2)
         
         # DB CLASS INITIALIZATION
         self.database = Database()
@@ -32,9 +48,49 @@ class MyFlaskApp:
     ######################################
     ######################################
     
+    ###############################
+    ######## LAUCH POINTS #########
+    ###############################
     def index(self):
         return render_template('index.html')
-
+    
+    def baptism(self):
+        return render_template('baptism.html')
+    
+    def getConnected(self):
+        return render_template('getConnected.html')
+    
+    def give(self):
+        return render_template('give.html')
+    
+    def helpOut(self):
+        return render_template('helpOut.html')
+    
+    def whatWeBelieve(self):
+        return render_template('whatWeBelieve.html')
+    
+    def whoWeAre(self):
+        return render_template('whoWeAre.html')
+    
+    ###############################
+    ############# FORMS ###########
+    ###############################
+    
+    def baptismForm(self):
+            return render_template('forms/baptisms/baptismForm.html')
+    
+    def getConnectedForm(self):
+            return render_template('forms/connections/getConnectedForm.html')
+    
+    # Job Forms
+    def helpOutFormJob1(self):
+        return render_template('forms/jobs/job1Form.html')
+    
+    def helpOutFormJob2(self):
+        return render_template('forms/jobs/job2Form.html')
+    
+    def tithingForm(self):
+        return render_template('forms/donations/tithingForm.html')
 
     #################################
     #################################
