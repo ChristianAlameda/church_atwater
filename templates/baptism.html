@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page1">
+    <div class="navbar">
+        <div class="church-logo">
+            <a href="/">
+                <img src="../static/img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
+            </a>
+        </div>
+        <ul class="item-list">
+            <li class="dropdown">
+                <a href="#">I'm New</a>
+                <div class="dropdown-content">
+                    <a href="whoWeAre">Who We Are</a>
+                    <a href="/">Service Times</a>
+                    <a href="whatWeBelieve">What We Believe</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Next Steps</a>
+                <div class="dropdown-content">
+                    <a href="getConnected">Get Connected</a>
+                    <a href="baptism">Baptism</a>
+                    <a href="helpOut">Help Out</a>
+                </div>
+            </li>
+            <li><a href="/">Events</a></li>
+            <li><a href="give">Give</a></li>
+        </ul>
+        <div class="watch-now">
+            <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
+        </div>
+    </div>
+    <!-- START OF PAGE -->
+    <div class="picture">
+        <div class="heading">
+            BAPTISM
+        </div>
+    </div>
+    <div class="background">
+        <div class="heading1">
+            What is Baptism?
+        </div>
+        <div class="explanation">
+            Baptism is a symbolic and sacred ritual in Christianity, representing spiritual purification and rebirth. 
+            Typically involving the application of water, it signifies a believer's public declaration of faith, cleansing from sin, 
+            and identification with the death and resurrection of Jesus Christ. Baptism varies among Christian denominations, 
+            with some practicing infant baptism as an initiation into the faith, while others emphasize believer's baptism, 
+            associating it with a conscious decision to follow Christ. Ultimately, baptism holds profound significance as a visible expression of
+            one's commitment to the Christian faith and community.
+        </div>
+        <div class="jobs">
+            <button class="button-79" role="button" onclick="navigateToPage1('baptismForm')"><span class="text">SIGN UP TO BE BAPTISED</span></button>
+            <div class="job-description">
+                12:00 AM - 1:00 PM <br>
+                Embarking on the journey of baptism is an empowering step toward spiritual renewal and public declaration of your faith.
+                    It symbolizes a profound commitment to your relationship with God, a cleansing of past sins, and a powerful connection to the Christian community. 
+                    Through baptism, you join a legacy of believers who have embraced the transformative power of this sacred ritual, marking a new chapter in your spiritual life. 
+                    It's an opportunity to publicly affirm your devotion to Christ and experience the profound joy of embracing your identity in the Christian faith.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/script.js"></script>
+{%endblock%}
+{%block style%}
+<style>
+    /* Style for the background class */
+   .background {
+       background-color: #e6e6e6; /* Set your desired background color */
+       padding: 20px;
+       margin: 10px;
+       text-align: center;
+   }
+
+   /* Style for the heading1 class */
+   .heading1 {
+       font-size: 28px;
+       font-weight: bold;
+       color: #0066cc;
+   }
+
+   /* Style for the mini-heading class */
+   .mini-heading {
+       font-size: 18px;
+       color: #333;
+       margin-top: 10px;
+   }
+
+   /* Style for the explanation class */
+   .explanation {
+       line-height: 1.6;
+       color: #666;
+       margin-top: 10px;
+   }
+
+   /* Style for the jobs class */
+   .jobs {
+       background-color: #f0f0f0;
+       padding: 20px;
+       border: 1px solid #ccc;
+       margin: 10px;
+       display: flex;
+       flex-direction: column;
+   }
+
+   /* Style for the job-title class */
+   .jobs a.job-title {
+       font-weight: bold;
+       color: #333; /* You can customize the color as needed */
+   }
+
+   /* Style for the job-description class */
+   .jobs .job-description {
+       margin-top: 5px;
+       color: #666; /* You can customize the color as needed */
+   }
+
+   /* Style for the job-title class */
+   .jobs a.job-title {
+       font-weight: bold;
+       color: #333; /* You can customize the color as needed */
+       text-decoration: underline; /* Add underline for less evident link */
+       cursor: pointer; /* Change cursor on hover for interactivity */
+   }
+
+   .jobs a.job-title:hover {
+       color: #0066cc; /* Change color on hover for interactivity */
+       text-decoration: none; /* Remove underline on hover */
+   }
+
+</style>
+{%endblock%}

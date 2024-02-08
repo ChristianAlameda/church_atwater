@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page1">
+    <div class="navbar">
+        <div class="church-logo">
+            <a href="/">
+                <img src="../static/img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
+            </a>
+        </div>
+        <ul class="item-list">
+            <li class="dropdown">
+                <a href="#">I'm New</a>
+                <div class="dropdown-content">
+                    <a href="whoWeAre">Who We Are</a>
+                    <a href="/">Service Times</a>
+                    <a href="whatWeBelieve">What We Believe</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Next Steps</a>
+                <div class="dropdown-content">
+                    <a href="getConnected">Get Connected</a>
+                    <a href="baptism">Baptism</a>
+                    <a href="helpOut">Help Out</a>
+                </div>
+            </li>
+            <li><a href="/">Events</a></li>
+            <li><a href="give">Give</a></li>
+        </ul>
+        <div class="watch-now">
+            <button class="button-64" role="button" onclick="navigateToPage1('https://getcssscan.com/css-buttons-examples')"><span class="text">WATCH NOW</span></button>
+        </div>
+
+    </div>
+    <div class="church-info">
+        <!-- ... (your content) ... -->
+        <div class="church-name">FIRST CHURCH OF THE NAZARENE</div><br><br><br>
+        <div class="church-location">ATWATER</div>
+        <div class="church-time">SUNDAY 9:30 AM - 11:30 AM</div>
+        <div class="church-new">
+            <button class="button-64" role="button" onclick="navigateToPage2('whatWeBelieve.html')"><span class="text">NEW? START HERE</span></button>
+        </div>
+        <div class="church-old">
+            <button class="button-64" role="button" onclick="navigateToPage3('getConnected.html')"><span class="text">OLD? SEE WHAT'S HAPPENING</span></button>
+        </div>
+    </div>
+</div>
+
+<!--SLIDESHOW-->
+<h1 class="notes">
+    WEEKLY, MONTHLY, AND ANNUAL EVENTS
+</h1>
+<div class="slideshow" id="events"></div>
+<!--MISSION-->
+<h1 class="notes">MISSION STATEMENT</h1>
+<div class="mission">
+    <h1 class="heading1">
+        Our Mission:
+    </h1>
+    <h1 class="heading2">
+        Connecting our community to Jesus
+        one relationship at a time        
+    </h1>
+    <h2 class="description">
+        We desire to be a dynamic community of faith: “living lives worthy of the gospel of Christ, standing firm in one spirit and striving side by side with one mind for the faith of the gospel” (Philippians 1:27).
+    </h2>
+</div>
+<!--SERVICE TIMES-->
+<div class="service-times" id="service-times">
+    <div class="service-times-title">
+        SERVICE TIMES
+    </div>
+    <div class="day">
+        SATURDAY
+        <div class="events">
+            Worship Service 6:00pm
+        </div>
+    </div>
+    <div class="day">
+        SUNDAY
+        <div class="events">
+            Worship Service 10:45am<br>
+            Spanish Service 12:15am<br>
+            Zoom Bible Study 6:00pm
+        </div>
+    </div>
+    <div class="day">
+        WEDNESDAY
+        <div class="events">
+            Spanish Service 7:00pm
+        </div>
+    </div>
+    <div class="day">
+        FRIDAY
+        <div class="events">
+            Spanish Prayer Meeting 7:00pm
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script>
+    let currentSlide = 0;
+    const backgrounds = [
+        'url("/static/img/church-logo.jpg")',
+        'url("/static/img/church-pastor1.jpg")',
+        'url("/static/img/church-pastor2.jpg")',
+        //'url("../img/church-pastor3.jpg")',
+
+        // Add more image URLs as needed
+    ];
+
+    function nextBackground() {
+        currentSlide = (currentSlide + 1) % backgrounds.length;
+        document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
+    }
+
+    // Change background every 3 seconds
+    setInterval(nextBackground, 3000);
+
+    // Initial display
+    document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
+    
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+
+    //SLIDESHOW2: index.html
+    let curr = 0
+    const happenings = [
+        'url("/static/img/church-saturday.jpg")',
+        'url("/static/img/church-sunday.jpg")'
+        // Add more image URLs as needed
+    ];
+    // SAME THING BUT FOR THE SECOND SLIDESHOW
+    function nextBackground1() {
+        curr = (curr + 1) % happenings.length;
+        document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
+    }
+
+    // Change background every 6 seconds
+    setInterval(nextBackground1, 6000);
+
+    // Initial display
+    document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
+
+
+</script>
+
+
+{% endblock %}
+{% block style %}
+<style>
+    .church-info {
+        margin: 5%;
+        text-align: center;
+        color: #eeff00;
+    }
+
+    .church-new,
+    .church-old {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        display: flex;
+        color: #eeff00;
+        background-color: rgba(120, 120, 120,.9);
+
+    }
+    
+    .mission {
+        text-align: center;
+        padding: 20px 30px; /* Add padding 20px at the top and bottom, 30px on the left and right */
+        background-color: #f8f8f8;
+        margin: 0 auto; /* Center the div horizontally */
+        width: 50%; /* Set the width to cover the middle two-fourths of the screen */
+        }
+
+    .slideshow {
+        background-image: url('/static/img/church-logo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%; /* Set width to cover the full viewport */
+        
+    }
+
+    .service-times {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        text-align: center;
+    }
+    
+    .service-times-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    
+    .day {
+        margin: 15px 0;
+    }
+    
+    .events {
+        margin-top: 8px;
+        font-style: italic;
+        color: #555;
+    }
+
+</style>
+{% endblock %}

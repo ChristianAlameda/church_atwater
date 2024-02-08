@@ -9,13 +9,9 @@ who-we-are.html Needs some background behind the pictures
 UNFINISHED SECTIONS
 -------------------
 JOBS
-each job needs a html file
-each html file needs a form to fill out.  
 each job needs an excel sheet
 
 GROUPS
-each group needs a html file
-each html file needs a form to fill out.  
 each job needs an excel sheet
 
 -------------------
