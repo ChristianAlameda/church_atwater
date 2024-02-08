@@ -1,0 +1,20 @@
+<!-- baptismForm.html -->
+{% extends "form_base.html" %}
+
+{% block form_title %}Tithing Form{% endblock %}
+
+{% block form_description %}
+    Fill this out and we will safely retrieve your tithe
+{% endblock %}
+
+{% block specific_fields %}
+    <!-- Include specific fields for the baptism form -->
+    <div class="box">
+        <div class="email-title">money-ammount* (999.99)</div>
+        <input class="email" type="text" name="money-ammt" id="money-ammt">
+    </div>
+{% endblock %}
+
+{% block form_action %}/helpOutJob1FormValidation{% endblock %}
+
+

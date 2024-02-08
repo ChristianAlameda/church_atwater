@@ -29,13 +29,12 @@ class MyFlaskApp:
         self.app.add_url_rule('/getConnected', 'getConnected', self.getConnected)
         self.app.add_url_rule('/getConnectedForm', 'getConnectedForm', self.getConnectedForm)
         
-        
         self.app.add_url_rule('/give', 'give', self.give)
-        self.app.add_url_rule('/giveForm', 'giveForm', self.tithingForm)
+        self.app.add_url_rule('/giveForm', 'giveForm', self.giveForm)
         
         self.app.add_url_rule('/helpOut', 'helpOut', self.helpOut)
-        self.app.add_url_rule('/helpOutFormJob1', 'helpOutFormJob1', self.helpOutFormJob1)
-        self.app.add_url_rule('/helpOutFormJob2', 'helpOutFormJob2', self.helpOutFormJob2)
+        self.app.add_url_rule('/helpOutJob1Form', 'helpOutJob1Form', self.helpOutJob1Form)
+        self.app.add_url_rule('/helpOutJob2Form', 'helpOutJob2Form', self.helpOutJob2Form)
         
         # DB CLASS INITIALIZATION
         self.database = Database()
@@ -83,14 +82,14 @@ class MyFlaskApp:
             return render_template('forms/connections/getConnectedForm.html')
     
     # Job Forms
-    def helpOutFormJob1(self):
-        return render_template('forms/jobs/job1Form.html')
+    def helpOutJob1Form(self):
+        return render_template('forms/jobs/helpOutJob1Form.html')
     
-    def helpOutFormJob2(self):
-        return render_template('forms/jobs/job2Form.html')
+    def helpOutJob2Form(self):
+        return render_template('forms/jobs/helpOutJob2Form.html')
     
-    def tithingForm(self):
-        return render_template('forms/donations/tithingForm.html')
+    def giveForm(self):
+        return render_template('forms/donations/giveForm.html')
 
     #################################
     #################################

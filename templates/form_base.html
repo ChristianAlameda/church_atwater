@@ -1,0 +1,55 @@
+<!-- form_base.html -->
+{% extends "form.html" %}
+
+{% block content %}
+    <div class="background">
+        <div class="header">
+            {% block form_title %}Default Title{% endblock %}
+        </div>
+        <h6 style="text-align:center;">
+            {% block form_description %}Default Description{% endblock %}
+        </h6>
+        <form action="{% block form_action %}/defaultValidation{% endblock %}" onsubmit="return validateForm()" methods="POST">
+            <!-- Include common form fields -->
+            {% block common_fields %}
+                <div class="box">
+                    <div class="first-name-title">First Name* (John)</div>
+                    <input class="first-name" type="text" name="first-name" id="first-name">
+                </div>
+                <div class="box">
+                    <div class="last-name-title">Last Name* (Doe)</div>
+                    <input class="last-name" type="text" name="last-name" id="last-name">
+                </div>
+                <div class="box">
+                    <div class="phone-title">Phone* (012-345-6789)</div>
+                    <input class="phone" type="text" name="phone" id="phone">
+                </div>
+                <div class="box">
+                    <div class="email-title">Email* (jdoe@gmail.com)</div>
+                    <input class="email" type="text" name="email" id="email">
+                </div>
+
+                <!-- Add other common fields here -->
+            {% endblock %}
+
+            <!-- Include specific form fields -->
+            {% block specific_fields %}{% endblock %}
+
+            <div class="why-join-box">
+                <div class="why-join-title">
+                    Why do you want to join? (OPTIONAL)
+                </div>
+                <textarea class="why-join" name="why-join" id="why-join" rows="4"></textarea>
+            </div>
+
+            <div class="warning">
+                We need the contact information you provide to us to contact you about our services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our
+                <a href="http://www.ncchico.org/privacy-policy/">Privacy Policy.</a>
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+{% endblock %}
