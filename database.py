@@ -10,7 +10,7 @@ class Database:
     def connect(self):
         self.myclient = pymongo.MongoClient("mongodb://localhost:27017/")
         self.mydb = self.myclient["church_atwater"]
-        self.mycol = self.mydb["BW_Test"]
+        self.mycol = self.mydb["forms"]
         
     def insertPost(self, post:dict):
         self.mycol.insert_one(post).inserted_id

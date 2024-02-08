@@ -6,6 +6,8 @@ import json
 import re
 from bson import ObjectId
 
+import webbrowser
+
 class MyFlaskApp:
     def __init__(self):
         # GLOBAL VARS
@@ -17,29 +19,40 @@ class MyFlaskApp:
         self.app.secret_key = 'your_secret_key_here'
 
         ### APP ROUTES ###
-        # HOME
         
+        # HOME / SINGLE PAGES
         self.app.add_url_rule('/', 'index', self.index)
         self.app.add_url_rule('/whatWeBelieve', 'whatWeBelieve', self.whatWeBelieve)
         self.app.add_url_rule('/whoWeAre', 'whoWeAre', self.whoWeAre)
         
+        # DOUBLE / TRIPLE PAGES
+        # BAPTISM
         self.app.add_url_rule('/baptism', 'baptism', self.baptism)
         self.app.add_url_rule('/baptismForm', 'baptismForm', self.baptismForm)
-        
+        self.app.add_url_rule('/baptismFormValidation', 'baptismFormValidation', self.baptismFormValidation, methods=['POST'])
+        # GET CONNECTED
         self.app.add_url_rule('/getConnected', 'getConnected', self.getConnected)
         self.app.add_url_rule('/getConnectedForm', 'getConnectedForm', self.getConnectedForm)
-        
+        self.app.add_url_rule('/getConnectedFormValidation', 'getConnectedFormValidation', self.getConnectedFormValidation, methods=['POST'])
+        # GIVE
         self.app.add_url_rule('/give', 'give', self.give)
         self.app.add_url_rule('/giveForm', 'giveForm', self.giveForm)
-        
+        self.app.add_url_rule('/giveFormValidation', 'giveFormFormValidation', self.giveFormValidation, methods=['POST'])
+        # HELPOUT
         self.app.add_url_rule('/helpOut', 'helpOut', self.helpOut)
         self.app.add_url_rule('/helpOutJob1Form', 'helpOutJob1Form', self.helpOutJob1Form)
+        self.app.add_url_rule('/helpOutJob1FormValidation', 'helpOutJob1FormValidation', self.helpOutJob1FormValidation, methods=['POST'])
         self.app.add_url_rule('/helpOutJob2Form', 'helpOutJob2Form', self.helpOutJob2Form)
+        self.app.add_url_rule('/helpOutJob2FormValidation', 'helpOutJob2FormValidation', self.helpOutJob2FormValidation, methods=['POST'])
+        
         
         # DB CLASS INITIALIZATION
         self.database = Database()
         self.database.connect()
         self.database.checkIfEmpty()
+        
+        webbrowser.open("http://127.0.0.1:5000")
+        
 
     ######################################
     ######################################
@@ -76,10 +89,10 @@ class MyFlaskApp:
     ###############################
     
     def baptismForm(self):
-            return render_template('forms/baptisms/baptismForm.html')
+        return render_template('forms/baptisms/baptismForm.html')
     
     def getConnectedForm(self):
-            return render_template('forms/connections/getConnectedForm.html')
+        return render_template('forms/connections/getConnectedForm.html')
     
     # Job Forms
     def helpOutJob1Form(self):
@@ -90,6 +103,103 @@ class MyFlaskApp:
     
     def giveForm(self):
         return render_template('forms/donations/giveForm.html')
+    
+    
+    ###############################
+    ####### FORM VALIDATION #######
+    ###############################
+    
+    def baptismFormValidation(self):
+        """_summary_: do stuff then return home
+
+        Returns:
+            _type_: _description_
+        """
+        fName = request.form['first-name']
+        lName = request.form['last-name']
+        phone = request.form['phone']
+        email = request.form['email']
+        whyJoin = request.form['why-join']
+        reason = 'baptism'
+        
+        self.insertion(fName, lName, phone, email, whyJoin, reason)
+        return redirect(url_for('index'))
+
+    def getConnectedFormValidation(self):
+        """_summary_: do stuff then return home
+
+        Returns:
+            _type_: _description_
+        """
+        fName = request.form['first-name']
+        lName = request.form['last-name']
+        phone = request.form['phone']
+        email = request.form['email']
+        whyJoin = request.form['why-join']
+        reason = 'connection'
+        
+        self.insertion(fName, lName, phone, email, whyJoin, reason)
+        return redirect(url_for('index'))
+    
+    def helpOutJob1FormValidation(self):
+        """_summary_: do stuff then return home
+
+        Returns:
+            _type_: _description_
+        """
+        fName = request.form['first-name']
+        lName = request.form['last-name']
+        phone = request.form['phone']
+        email = request.form['email']
+        whyJoin = request.form['why-join']
+        reason = 'job1'
+        
+        self.insertion(fName, lName, phone, email, whyJoin, reason)
+        return redirect(url_for('index'))
+    
+    def helpOutJob2FormValidation(self):
+        """_summary_: do stuff then return home
+
+        Returns:
+            _type_: _description_
+        """
+        fName = request.form['first-name']
+        lName = request.form['last-name']
+        phone = request.form['phone']
+        email = request.form['email']
+        whyJoin = request.form['why-join']
+        reason = 'job2'
+        
+        self.insertion(fName, lName, phone, email, whyJoin, reason)
+        return redirect(url_for('index'))
+    
+    def giveFormValidation(self):
+        """_summary_: do stuff then return home
+
+        Returns:
+            _type_: _description_
+        """
+        fName = request.form['first-name']
+        lName = request.form['last-name']
+        phone = request.form['phone']
+        email = request.form['email']
+        moneyAmmount = request.form['money-ammt']
+        whyJoin = request.form['why-join']
+        reason = 'giving'
+        
+        insertion = {
+            'fname':fName,
+            'lName':lName,
+            'phone':phone,
+            'email':email,
+            'moneyAmmount':float(moneyAmmount),
+            'whyJoin':whyJoin,
+            'reason':reason
+        }
+        print(insertion)
+        self.database.insertPost(insertion)
+        
+        return redirect(url_for('index'))
 
     #################################
     #################################
@@ -97,6 +207,18 @@ class MyFlaskApp:
     #################################
     #################################
     
+    def insertion(self, fName, lName, phone, email, whyJoin, reason):
+        insertion = {
+            'fname':fName,
+            'lName':lName,
+            'phone':phone,
+            'email':email,
+            'whyJoin':whyJoin,
+            'reason':reason
+        }
+        print(insertion)
+        self.database.insertPost(insertion)
+        
     def parseStringToDict(self, stringedDictionary:str):
         # Define a regular expression pattern to match key-value pairs
         pattern = r"'(\w+)': (?:'([^']*)'|(?:\[(.*?)\])|(\d+\.\d+)|ObjectId\('([^']*)'\))"
