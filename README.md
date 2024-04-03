@@ -27,5 +27,5 @@ To run this website locally on your computer, follow these steps:
 OR
 1. **Click on the link**
    ```
-    https://christianalameda.github.io/church_atwater/
+   [Click To View Website](https://https://christianalameda.github.io/church_atwater/)
    ```
