@@ -24,3 +24,8 @@ To run this website locally on your computer, follow these steps:
     uncompress the folder
     double click the index.html file
    ```
+OR
+1. **Click on the linl**
+   ```
+    https://christianalameda.github.io/church_atwater/
+   ```
