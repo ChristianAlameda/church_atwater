@@ -149,7 +149,7 @@ Picture at top of all html files in index folder and jobs
     margin-top: 20px;
     background-image: url('../img/church-sunday.jpg');
     background-size: cover; /* Adjust the background size as needed */
-    height: 300px; /* Adjust the height as needed */
+    height: 300px; /*Adjust the height as needed*/
 }
 
 /* Style for the heading class */
