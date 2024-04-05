@@ -1,27 +1,47 @@
-THINGS FOR ME
-cut the 3 second and 6 second start time for the pictures
-make section for the bottom
-make the CHURCH OF THE NAZARENE a little bigger
-on help-out.html the picture loads differents when screen size changes
-who-we-are.html Needs some background behind the pictures
-
-
-UNFINISHED SECTIONS
 -------------------
-JOBS
-each job needs a html file
-each html file needs a form to fill out.  
-each job needs an excel sheet
+THINGS FOR ME
+-------------------
 
-GROUPS
-each group needs a html file
-each html file needs a form to fill out.  
-each job needs an excel sheet
+-------------------
+-------------------
+UNFINISHED 
+-------------------
 
+
+
+-------------------
 -------------------
 QUESTIONS FOR DAN
-Need more descriptions, emails, and titles from members or staff of the church // who-we-are.html
-Need the link for the zoom // ALL
-Need a valid link for Amazon /index.html
-Need a new youtube channel: Old channel is Josh's //index.html
-Need a list of groups for newcomers or members to join // get-connected.html 
+-------------------
+Switch link for "zoom" to 'Facebook'
+different text for giving page.
+
+
+-------------------
+-------------------
+
+
+
+
+1: 
+abrupt
+what does abrupt mean?
+wrong info
+info could use work?
+mobile interface sucks // testing mode wtf?
+rought draft
+
+2:
+switch to Nancy
+mention Sunday School
+get rid of youtube channel
+no hyperlink?
+uniformity in color scheme/fonts
+no blue, gray, yellow
+wants white font
+
+3:
+less pixelated photos
+no youtube
+
+
