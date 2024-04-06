@@ -1,0 +1,49 @@
+/* Add or override styles for mobile-friendliness */
+
+/* Make contact info and navbar responsive */
+.contact-info {
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust button size for smaller screens */
+.button-64 {
+    font-size: 16px; /* Reduce font size */
+    min-width: 120px; /* Adjust button width */
+    margin-top: 10px; /* Add spacing between elements */
+}
+
+/* Make church info responsive */
+.church-info {
+    text-align: center;
+}
+
+/* Adjust spacing and font size for mission statement */
+.mission {
+    padding: 10px; /* Reduce padding */
+    font-size: 16px; /* Reduce font size */
+}
+
+/* Make service times responsive */
+.service-times {
+    max-width: 90%; /* Adjust width for smaller screens */
+    margin: 20px auto; /* Center the div horizontally and add margin */
+    padding: 10px; /* Reduce padding */
+}
+
+.service-times-title {
+    font-size: 20px; /* Reduce font size */
+}
+
+.day {
+    margin: 10px 0; /* Adjust margin */
+}
+
+.events {
+    font-size: 14px; /* Reduce font size */
+}

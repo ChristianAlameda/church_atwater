@@ -16,6 +16,11 @@ QUESTIONS FOR DAN
 Switch link for "zoom" to 'Facebook'
 different text for giving page.
 
+from 1:
+need information for people that is more accurate
+Maybe have them fill out a google form
+
+
 
 -------------------
 -------------------
@@ -32,8 +37,6 @@ mobile interface sucks // testing mode wtf?
 rought draft
 
 2:
-switch to Nancy
-mention Sunday School
 get rid of youtube channel
 no hyperlink?
 uniformity in color scheme/fonts
