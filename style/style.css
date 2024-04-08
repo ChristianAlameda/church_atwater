@@ -127,7 +127,7 @@ NAVBAR / CONTACT-INFO
 .picture {
     text-align: center;
     margin-top: 20px;
-    background-image: url('img/together.jpg'); /*../*/
+    background-image: url('./img/together.jpg'); /*../*/
     background-size: cover; 
 }
 
