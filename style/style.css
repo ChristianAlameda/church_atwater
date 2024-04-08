@@ -127,7 +127,8 @@ NAVBAR / CONTACT-INFO
 .picture {
     text-align: center;
     margin-top: 20px;
-    background-image: url("../img/together.jpg"); /*../*/
+    /*https://ChristianAlameda.github.io/church_atwater/img/pastor2.jpg*/
+    background-image: url("https://ChristianAlameda.github.io/church_atwater/img/together.jpg"); /*../*/
     background-size: cover; 
 }
 
