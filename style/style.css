@@ -1,4 +1,17 @@
 /* 
+*
+*
+*
+*
+*
+*
+* ALL
+*
+*
+*
+*
+*/
+/* 
 FOR THE DROP DOWN
 */
 ul {
@@ -52,6 +65,9 @@ li a:hover {
 .dropdown-content a:hover {
     background-color: #ddd;
 }
+/*
+END DROPDOWN
+*/
 
 /* 
 BODY 
@@ -89,13 +105,6 @@ NAVBAR / CONTACT-INFO
     align-items: center;
 }
 
-.contact-info {
-    display: flex;
-    color: #eeff00;
-    background-color: rgba(120, 120, 120,.9);
-
-}
-
 .phone, 
 .location,
 .email, 
@@ -104,10 +113,133 @@ NAVBAR / CONTACT-INFO
     margin-left:10px;
 }
 
-/* 
-THINGS I WOULD LIKE TO SEE ON OTHER PAGES 
-SO WE LOOK UNIFORM
+.youtube{
+    display:None;
+}
+
+.contact-info {
+    display: flex;
+    color: #ffffff;
+    background-color: rgba(120, 120, 120,.9);
+
+}
+
+.picture {
+    text-align: center;
+    margin-top: 20px;
+    background-image: url('../img/together.jpg');
+    background-size: cover; 
+}
+
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/*
+END ALL
+
+
+
+END ALL
+
+
+
+END ALL
+
+
+
+END ALL
+
+
+
+END ALL
+
+
+
+END ALL
 */
+
+/*   
+INDEX.HTML
+
+
+INDEX.HTML
+
+
+INDEX.HTML
+
+
+INDEX.HTML
+
+
+INDEX.HTML
+
+
+INDEX.HTML
+*/
+.church-info {
+    margin: 5%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.church-new,
+.church-old {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    margin: 0 auto; 
+    width: 50%; 
+  }
+
+.slideshow {
+    background-image: url('./img/church-logo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%; 
+    
+}
+
+.service-times {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.service-times-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.day {
+    margin: 15px 0;
+}
+
+.events {
+    margin-top: 8px;
+    font-style: italic;
+    color: #555;
+}
+
 .page1 {
     background-image: url('../img/church-picture.jpg');
     background-size: cover;
@@ -117,7 +249,7 @@ SO WE LOOK UNIFORM
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 100%; /* Set width to cover the full viewport */
+    width: 100%; 
 }
 
 .notes{
@@ -141,21 +273,154 @@ SO WE LOOK UNIFORM
     font-size: 18px;
     line-height: 1.5;
 }
-/* 
-Picture at top of all html files in index folder and jobs
-*/
-.picture {
+
+.mission {
     text-align: center;
-    margin-top: 20px;
-    background-image: url('../img/church-sunday.jpg');
-    background-size: cover; /* Adjust the background size as needed */
-    height: 300px; /*Adjust the height as needed*/
+    padding: 20px 30px; 
+    background-color: #f8f8f8;
+    margin: 0 auto; 
+    width: 50%; 
+}
+/*
+JOB TYPE HTML: give, help-out, get-connected, baptism
+
+
+
+JOB TYPE HTML: give, help-out, get-connected, baptism
+
+
+
+JOB TYPE HTML: give, help-out, get-connected, baptism
+
+
+
+JOB TYPE HTML: give, help-out, get-connected, baptism
+
+
+
+JOB TYPE HTML: give, help-out, get-connected, baptism
+*/
+.background {
+    background-color: #e6e6e6; /* Set your desired background color */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
 }
 
-/* Style for the heading class */
-.heading {
-    font-size: 36px;
+.heading1 {
+    font-size: 28px;
     font-weight: bold;
-    color: white;
+    color: #0066cc;
 }
 
+.mini-heading {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.explanation {
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+    display:block;
+}
+
+.jobs {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jobs a.job-title {
+    font-weight: bold;
+    color: #333; 
+}
+
+.jobs .job-description {
+    margin-top: 5px;
+    color: #666; 
+}
+
+.jobs a.job-title {
+    font-weight: bold;
+    color: #333; 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.jobs a.job-title:hover {
+    color: #0066cc; /* Change color on hover for interactivity */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+
+/*
+
+END BUTTON OPTIONS
+
+
+END BUTTON OPTIONS
+
+
+END BUTTON OPTIONS
+
+
+END BUTTON OPTIONS
+
+
+END BUTTON OPTIONS
+
+*/
+
+/*
+FOR PHONE
+*/
+@media only screen and (min-width: 360px){
+    .navbar{
+        display:contents;  
+        text-align:center;
+    }
+
+    .watch-now{
+        display:contents;
+        align-content:center;
+        text-align:center;
+    }
+
+    .slideshow{
+        min-height: 30vh;
+    }
+
+    .picture {
+        min-height: 30vh; 
+    }
+}
+
+/*
+FOR TABLET
+*/
+@media only screen and (min-width: 768px){
+    .navbar{
+        display:flex; 
+    }
+}
+
+/*
+FOR COMPUTER
+*/
+@media only screen and (min-width: 1000px){
+    .navbar{
+        display:flex;  /*RIGHT NOW IT FUCKS UP COMPUTERS*/
+    }
+    .slideshow{
+        min-height: 100vh;
+    }
+    .picture{
+        min-height: 100vh;
+
+    }
+}

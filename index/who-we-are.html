@@ -7,21 +7,18 @@
     <link rel="stylesheet" href="../style/button.css">
     <title>Atwater Church</title>
     <style>
-        /*body {
-            font-family: Arial, sans-serif;
+        body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4;
-        }*/
+        }
         
         .container {
-            /*background-color:rgba(255,255,255,.1);*/
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 50vh;
         }
 
         .item-container {
@@ -34,9 +31,9 @@
         }
 
         .item-container img {
-            width: 100%;
+            width: 50%;
             border-radius: 50%;
-            /*margin-bottom: 10px;*/
+            margin-bottom: 10px;
             margin:10px;
         }
 
@@ -52,25 +49,30 @@
 
         .info-container p {
             color: #d1c2c2;
+            margin: 0px 5px;
         }
 
         /* Alternating left-to-right layout */
         .item-container:nth-child(even) {
             flex-direction: row-reverse;
+            align-content: center;
         }
 
         /* Adjust the order for odd containers */
         .item-container:nth-child(odd) {
             flex-direction: row;
+            align-content:center;
+
         }
+
         h2{
             background-color:rgba(78, 218, 164, 0.5);
-            color: rgb(255, 255, 255); 
         }
+
         .info{
             background-color:rgba(218, 78, 78, 0.5);
-            color:rgb(255, 255, 255) ; 
         }
+
         h2,
         .info {
             color: white;
