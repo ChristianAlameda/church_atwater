@@ -127,7 +127,7 @@ NAVBAR / CONTACT-INFO
 .picture {
     text-align: center;
     margin-top: 20px;
-    background-image: url('./img/together.jpg'); /*../*/
+    background-image: url("../img/together.JPG"); /*../*/
     background-size: cover; 
 }
 
@@ -203,7 +203,7 @@ INDEX.HTML
   }
 
 .slideshow {
-    background-image: url('./img/church-logo.jpg');
+    background-image: url("../img/church-logo.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -241,7 +241,7 @@ INDEX.HTML
 }
 
 .page1 {
-    background-image: url('../img/church-picture.jpg');
+    background-image: url("../img/church-picture.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ JOB TYPE HTML: give, help-out, get-connected, baptism
 JOB TYPE HTML: give, help-out, get-connected, baptism
 */
 .background {
-    background-color: #e6e6e6; /* Set your desired background color */
+    background-color: #e6e6e6; 
     padding: 20px;
     margin: 10px;
     text-align: center;
@@ -353,8 +353,8 @@ JOB TYPE HTML: give, help-out, get-connected, baptism
 }
 
 .jobs a.job-title:hover {
-    color: #0066cc; /* Change color on hover for interactivity */
-    text-decoration: none; /* Remove underline on hover */
+    color: #0066cc; 
+    text-decoration: none; 
 }
 
 
@@ -417,7 +417,7 @@ FOR COMPUTER
 */
 @media only screen and (min-width: 1000px){
     .navbar{
-        display:flex;  /*RIGHT NOW IT FUCKS UP COMPUTERS*/
+        display:flex;  
     }
     .slideshow{
         min-height: 100vh;
