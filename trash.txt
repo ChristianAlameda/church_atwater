@@ -1,0 +1,29 @@
+
+// Components pages generation
+
+ng g c pages/home
+ng g c pages/im-new/who-we-are
+ng g c pages/im-new/what-we-believe
+
+ng g c pages/next-steps/get-connected
+ng g c pages/next-steps/baptism
+ng g c pages/next-steps/help-out
+
+ng g c pages/give
+ng g c pages/form
+
+// Service generation
+ng g s services/auth
+
+
+// Components: headers,footers, navbars
+ng g c components/header
+ng g c components/footer
+ng g c components/navbar
+
+
+
+I want to get these code files and put them onto a branch of:
+church_atwater
+branchname: developer
+

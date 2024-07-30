@@ -1,0 +1,85 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .input-data {
+    position: relative;
+  }
+  
+  .input-data label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-data input[type="text"],
+  .input-data input[type="email"],
+  .input-data input[type="tel"],
+  .input-data textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .input-data textarea {
+    resize: vertical;
+  }
+  
+  .input-data .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .input-data input:focus ~ .underline,
+  .input-data textarea:focus ~ .underline {
+    transform: scaleX(1);
+  }
+  
+  .radio-option {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .submit-btn button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-btn button:hover {
+    background-color: #0056b3;
+  }
+  

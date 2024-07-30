@@ -1,0 +1,21 @@
+.phone, 
+.location,
+.email, 
+.youtube, 
+.facebook{
+    margin-left:10px;
+}
+
+.contact-info {
+    color: #ffffff;
+    background-color: rgba(120, 120, 120,.9);
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text content */
+    margin-bottom: 20px; /* Optional: Add margin at the bottom */
+}
+
+.contact-info > * {
+margin: 0 10px; /* Adjust as needed for spacing between items */
+}

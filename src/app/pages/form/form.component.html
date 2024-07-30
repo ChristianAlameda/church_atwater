@@ -1,0 +1,54 @@
+<div class="container">
+   <div class="text">
+      Contact us Form
+   </div>
+   <form (ngSubmit)="submitForm()">
+      <div class="form-row">
+         <div class="input-data">
+            Group you wish sign up for <br>
+            <label *ngFor="let method of groupSelectionMethods" class="radio-option">
+               <input type="radio" name="groupSelectionMethod" [(ngModel)]="groupSelectionMethod" [value]="method">
+               <span style="color:black">{{ method }}</span>
+            </label>
+         </div>
+      </div>
+      <div class="form-row">
+         <label for="firstName">First Name</label>
+         <div class="input-data">
+            <input type="text" required [(ngModel)]="firstName" name="firstName">
+            <div class="underline"></div>
+         </div>
+         <label for="lastName">Last Name</label>
+         <div class="input-data">
+            <input type="text" required [(ngModel)]="lastName" name="lastName">
+            <div class="underline"></div>
+         </div>
+      </div>
+      <label for="email">Email Address</label>
+      <div class="form-row">
+         <div class="input-data">
+            <input type="email" required [(ngModel)]="email" name="email">
+            <div class="underline"></div>
+         </div>
+         <label for="phone">Phone Number</label>
+         <div class="input-data">
+            <input type="tel" required [(ngModel)]="phone" name="phone">
+            <div class="underline"></div>
+         </div>
+      </div>
+      <div class="form-row">
+         <label for="message">Write your message</label>
+         <div class="input-data textarea">
+            <textarea rows="8" cols="80" required [(ngModel)]="message" name="message"></textarea>
+            <br />
+            <div class="underline"></div>
+         </div>
+      </div>
+      <div class="form-row submit-btn">
+         <div class="input-data">
+            <div class="inner"></div>
+            <button type="submit">Submit</button>
+         </div>
+      </div>
+   </form>
+</div>
