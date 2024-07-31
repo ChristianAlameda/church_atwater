@@ -13,6 +13,7 @@ import { BaptismComponent }       from './pages/next-steps/baptism/baptism.compo
 import { HelpOutComponent }       from './pages/next-steps/help-out/help-out.component';
 import { GiveComponent }          from './pages/give/give.component';
 import { FormComponent }          from './pages/form/form.component';
+import { ContactUsComponent }     from './pages/contact-us/contact-us.component';
 
 import { HeaderComponent }  from './components/header/header.component';
 import { FooterComponent }  from './components/footer/footer.component';
@@ -36,6 +37,7 @@ import { ButtonComponent }  from './components/button/button.component';
     FooterComponent,
     NavbarComponent,
     ButtonComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

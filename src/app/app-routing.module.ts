@@ -10,6 +10,7 @@ import { WhoWeAreComponent }      from './pages/im-new/who-we-are/who-we-are.com
 import { BaptismComponent }      from './pages/next-steps/baptism/baptism.component';
 import { GetConnectedComponent } from './pages/next-steps/get-connected/get-connected.component';
 import { HelpOutComponent } from './pages/next-steps/help-out/help-out.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'baptism', component: BaptismComponent},
   { path: 'get-connected', component: GetConnectedComponent},
   { path: 'help-out', component: HelpOutComponent},
-  { path: 'form', component: FormComponent},
+  { path: 'contact-us', component: ContactUsComponent},
 
 ]
 

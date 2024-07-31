@@ -1,19 +1,30 @@
-<nav role="navigation" class="primary-navigation">
-  <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a href="#">I'm New &dtrif;</a>
-        <ul class="dropdown">
-            <li><a routerLink="what-we-believe">what-we-believe</a></li>
-            <li><a routerLink="who-we-are">who-we-are</a></li>
-        </ul>
+<div class="navbar">
+  <div class="church-logo">
+    <a routerLink="/">
+      <img src="assets/img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
+      
+    </a>
+  </div>
+  <ul class="item-list">
+    <li class="dropdown">
+      <a href="#">I'm New</a>
+      <div class="dropdown-content">
+        <a routerLink="/who-we-are">Who We Are</a>
+        <a href="#service-times">Service Times</a>
+        <a routerLink="/what-we-believe">What We Believe</a>
+      </div>
     </li>
-    <li><a href="#">Next Steps &dtrif;</a>
-        <ul class="dropdown">
-            <li><a routerLink="baptism">baptism</a></li>
-            <li><a routerLink="get-connected">get-connected</a></li>
-            <li><a routerLink="help-out">help-out</a></li>
-        </ul>
+    <li class="dropdown">
+      <a href="#">Next Steps</a>
+      <div class="dropdown-content">
+        <a routerLink="/get-connected">Get Connected</a>
+        <a routerLink="/baptism">Baptism</a>
+        <a routerLink="/help-out">Help Out</a>
+      </div>
     </li>
-    <li><a routerLink="give">give</a> </li>
+    <li><a href="#events">Events</a></li>
+    <li><a routerLink="/give">Give</a></li>
   </ul>
-</nav>
+
+  <app-button onclick="window.location.href='https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09'">Watch Now</app-button>
+</div>
