@@ -1,0 +1,14 @@
+<button onclick="openEmailClient()">Contact Us</button>
+
+<script>
+  function openEmailClient() {
+    const email = 'atwaternazarene@gmail.com';
+    const subject = 'I would like to be baptized';
+    const encodedSubject = subject.replace(/ /g, '%20');
+    const body = 'My name is _____ and I want to be baptized.';
+    const encodedBody = body.replace(/ /g, '%20');
+    
+    window.location.href = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+    }
+      
+</script>

@@ -1,0 +1,230 @@
+/* 
+BODY 
+*/
+
+
+body {
+    margin: 0;
+    display: flex; // If not necessary, consider removing
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; // Change to flex-start
+    min-height: 100vh;
+    transition: background-image 1s ease-in-out;
+    background-color: rgb(81, 81, 154); 
+}
+
+.page1 {
+    position: relative;
+    width: 100%;
+    height: 50vh; // or adjust as needed
+    overflow: hidden;
+    
+    // TODO: Change the number of slides to like 4 maybe
+
+
+    // Define the background images for the slideshow 1/9
+    @keyframes slideBackgrounds {
+      0% {
+        background-image: url("../../../assets/img/people/dan-pastor.jpg");
+      }
+      16.67% {
+        background-image: url("../../../assets/img/church-pastor1.jpg");
+      }
+      33.33% {
+        background-image: url("../../../assets/img/pastor4.jpg");
+      }
+      50% {
+        background-image: url("../../../assets/img/work1.jpg");
+      }
+      66.67% {
+        background-image: url("../../../assets/img/work2.jpg");
+      }
+      83.33% {
+        background-image: url("../../../assets/img/work3.jpg");
+      }
+      100% {
+        background-image: url("../../../assets/img/church-logo.jpg");
+      }
+    }
+    
+    // Apply the animation
+    animation: slideBackgrounds 18s infinite; // Adjust duration to match the number of images
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }  
+
+
+
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(133, 140, 81);
+    text-align:center;
+}
+
+.notes{
+    color:yellow;
+    text-align:center;
+}
+
+.heading1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.heading2 {
+    color: #555;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+.background {
+    background-color: rgb(81, 81, 154); 
+    text-align: center;
+}
+
+
+
+
+//////////////
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.container {
+    background-color: lightblue;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // height: 50vh;
+}
+
+.item-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.item-container img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin:10px;
+}
+
+.info-container {
+    color:wheat;
+    text-align: center;
+}
+
+.info-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-container p {
+    color: #d1c2c2;
+    margin: 0px 5px;
+}
+
+/* Alternating left-to-right layout */
+.item-container:nth-child(even) {
+    flex-direction: row-reverse;
+    align-content: center;
+}
+
+/* Adjust the order for odd containers */
+.item-container:nth-child(odd) {
+    flex-direction: row;
+    align-content:center;
+
+}
+
+h2{
+    background-color:rgba(78, 218, 164, 0.5);
+}
+
+.info{
+    background-color:rgba(218, 78, 78, 0.5);
+}
+
+h2,
+.info {
+    color: white;
+}
+
+/*
+FOR PHONE
+*/
+@media only screen and (min-width: 360px){
+    .navbar{
+        display:contents;  
+        text-align:center;
+    }
+
+    .watch-now{
+        display:contents;
+        align-content:center;
+        text-align:center;
+    }
+
+    .slideshow{
+        min-height: 30vh;
+    }
+
+    .picture {
+        min-height: 30vh; 
+    }
+}
+
+/*
+FOR TABLET
+*/
+@media only screen and (min-width: 768px){
+    .navbar{
+        display:flex; 
+    }
+    .picture{
+        min-height: 30vh;
+    }
+}
+
+/*
+FOR COMPUTER
+*/
+@media only screen and (min-width: 1000px){
+    .navbar{
+        display:flex;  
+    }
+    .slideshow{
+        min-height: 100vh;
+    }
+    .picture{
+        min-height: 100vh;
+    }
+}

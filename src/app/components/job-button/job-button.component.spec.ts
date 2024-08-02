@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ContactUsComponent } from './contact-us.component';
+import { JobButtonComponent } from './job-button.component';
 
-describe('ContactUsComponent', () => {
-  let component: ContactUsComponent;
-  let fixture: ComponentFixture<ContactUsComponent>;
+describe('JobButtonComponent', () => {
+  let component: JobButtonComponent;
+  let fixture: ComponentFixture<JobButtonComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactUsComponent ],
+      declarations: [ JobButtonComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ContactUsComponent);
+    fixture = TestBed.createComponent(JobButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

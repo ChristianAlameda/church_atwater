@@ -1,9 +1,8 @@
+<app-header></app-header>
 <div class="navbar">
   <div class="church-logo">
-    <a routerLink="/">
-      <img src="assets/img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
-      
-    </a>
+    <!-- TODO: fix the logo on the top left -->
+    <a routerLink="/"><img></a>
   </div>
   <ul class="item-list">
     <li class="dropdown">
@@ -17,14 +16,15 @@
     <li class="dropdown">
       <a href="#">Next Steps</a>
       <div class="dropdown-content">
-        <a routerLink="/get-connected">Get Connected</a>
         <a routerLink="/baptism">Baptism</a>
         <a routerLink="/help-out">Help Out</a>
       </div>
     </li>
     <li><a href="#events">Events</a></li>
-    <li><a routerLink="/give">Give</a></li>
+    <li><a href="https://engage.suran.com/atwaternaz/s/login">Give</a></li>
   </ul>
-
-  <app-button onclick="window.location.href='https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09'">Watch Now</app-button>
+  <div class="watch-now">
+    <!-- &#64; -->
+    <app-button label="WATCH@10:45" [url]="'https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09'"></app-button>
+  </div>
 </div>
