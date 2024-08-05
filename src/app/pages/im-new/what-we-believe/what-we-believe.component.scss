@@ -1,128 +1,4 @@
-/* 
-BODY 
-*/
-
-
-body {
-    margin: 0;
-    display: flex; // If not necessary, consider removing
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; // Change to flex-start
-    min-height: 100vh;
-    transition: background-image 1s ease-in-out;
-    background-color: rgb(81, 81, 154); 
-}
-
-.page1 {
-    position: relative;
-    width: 100%;
-    height: 50vh; // or adjust as needed
-    overflow: hidden;
-    
-    // TODO: Change the number of slides to like 4 maybe
-
-
-    // Define the background images for the slideshow 1/9
-    @keyframes slideBackgrounds {
-      0% {
-        background-image: url("../../../assets/img/people/dan-pastor.jpg");
-      }
-      16.67% {
-        background-image: url("../../../assets/img/church-pastor1.jpg");
-      }
-      33.33% {
-        background-image: url("../../../assets/img/pastor4.jpg");
-      }
-      50% {
-        background-image: url("../../../assets/img/work1.jpg");
-      }
-      66.67% {
-        background-image: url("../../../assets/img/work2.jpg");
-      }
-      83.33% {
-        background-image: url("../../../assets/img/work3.jpg");
-      }
-      100% {
-        background-image: url("../../../assets/img/church-logo.jpg");
-      }
-    }
-    
-    // Apply the animation
-    animation: slideBackgrounds 18s infinite; // Adjust duration to match the number of images
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }  
-
-
-
-
-.heading {
-    font-size: 36px;
-    font-weight: bold;
-    color: rgb(133, 140, 81);
-    text-align:center;
-}
-
-.notes{
-    color:yellow;
-    text-align:center;
-}
-
-.heading1 {
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.heading2 {
-    color: #555;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.description {
-    color: #777;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-
-.background {
-    background-color: rgb(81, 81, 154); 
-    text-align: center;
-}
-
-
-
-
-//////////////
-/// 
-/// 
-/// 
-/// 
-/// 
-/// 
-
-
-////////////////////////////////////////////////////////////////
-.all {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color:black;
-}
-.background {
-    background-color: rgba(65, 181, 235, 0.7); /* Set background color for the edges */
-    align-content: center;
-    display:block;
-    padding: 20px;
-    margin-top: 20px; /* Add some space between the top content and bottom portion */
-    max-width: 60%; /* Set maximum width to hold the 3rd to 9th portions */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-}
+// HEADERS
 .heading {
     text-align:center;
     font-size: 2em;
@@ -139,6 +15,37 @@ body {
     margin: 10px auto; /* Center the line and add space around it */
 }
 
+.heading1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.heading2 {
+    color: #555;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+// ETC
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:black;
+}
+.background {
+    background-color: rgba(65, 181, 235, 0.7); /* Set background color for the edges */
+    align-content: center;
+    display:block;
+    padding: 20px;
+    margin-top: 20px; /* Add some space between the top content and bottom portion */
+    max-width: 60%; /* Set maximum width to hold the 3rd to 9th portions */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
 .description {
     color: #333; /* Set text color to a dark shade, you can adjust this value */
     margin-bottom: 10px; /* Add some space below each description */
@@ -151,55 +58,4 @@ body {
     height: 2px;
     background-color: #333; /* Set line color to a dark shade */
     margin: 5px 0; /* Add space around the line */
-}
-
-/*
-FOR PHONE
-*/
-@media only screen and (min-width: 360px){
-    .navbar{
-        display:contents;  
-        text-align:center;
-    }
-
-    .watch-now{
-        display:contents;
-        align-content:center;
-        text-align:center;
-    }
-
-    .slideshow{
-        min-height: 30vh;
-    }
-
-    .picture {
-        min-height: 30vh; 
-    }
-}
-
-/*
-FOR TABLET
-*/
-@media only screen and (min-width: 768px){
-    .navbar{
-        display:flex; 
-    }
-    .picture{
-        min-height: 30vh;
-    }
-}
-
-/*
-FOR COMPUTER
-*/
-@media only screen and (min-width: 1000px){
-    .navbar{
-        display:flex;  
-    }
-    .slideshow{
-        min-height: 100vh;
-    }
-    .picture{
-        min-height: 100vh;
-    }
 }

@@ -17,6 +17,7 @@ import { FooterComponent }  from './components/footer/footer.component';
 import { NavbarComponent }  from './components/navbar/navbar.component';
 import { ButtonComponent }  from './components/button/button.component';
 import { JobButtonComponent } from './components/job-button/job-button.component';
+import { BasePageComponent } from './components/base-page/base-page.component';
 
 // import { SupabaseService } from './services/supabase-client.service'
 
@@ -34,6 +35,7 @@ import { JobButtonComponent } from './components/job-button/job-button.component
     NavbarComponent,
     ButtonComponent,
     JobButtonComponent,
+    BasePageComponent,
   ],
   imports: [
     BrowserModule,

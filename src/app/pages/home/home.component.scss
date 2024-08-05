@@ -1,20 +1,3 @@
-/* 
-BODY 
-*/
-body {
-    margin: 0;
-    display: flex; // If not necessary, consider removing
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; // Change to flex-start
-    min-height: 100vh;
-    transition: background-image 1s ease-in-out;
-    background-color: #070035;
-}
-
-
-
-
 .page1 {
     position: relative;
     width: 100%;
@@ -46,14 +29,13 @@ body {
       }
     }
     
-    // Apply the animation
     animation: slideBackgrounds 18s infinite; // Adjust duration to match the number of images
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   
-
+// CHURCH BOX INFO
 .church-info,
 .church-name,
 .church-location,
@@ -62,16 +44,6 @@ body {
 .church-old {
     margin: 10px;
 }
-
-
-.heading {
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-}
-
-
-
 .church-info {
     margin: 5%;
     text-align: center;
@@ -93,7 +65,7 @@ body {
     width: 50%; 
   }
 
-  .slideshow {
+.slideshow {
     width: 100%;
     // height: 300px; // Adjust based on your design
     background-size: cover;
@@ -127,6 +99,7 @@ body {
     text-align: center;
 }
 
+// SERVICE TIMES
 .service-times-title {
     font-size: 24px;
     font-weight: bold;
@@ -148,18 +121,6 @@ body {
     text-align:center;
 }
 
-.heading1 {
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.heading2 {
-    color: #555;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
 .description {
     color: #777;
     font-size: 18px;
@@ -173,25 +134,7 @@ body {
     margin: 0 auto; 
     width: 50%; 
 }
-/*
-JOB TYPE HTML: give, help-out, get-connected, baptism
 
-
-
-JOB TYPE HTML: give, help-out, get-connected, baptism
-
-
-
-JOB TYPE HTML: give, help-out, get-connected, baptism
-
-
-
-JOB TYPE HTML: give, help-out, get-connected, baptism
-
-
-
-JOB TYPE HTML: give, help-out, get-connected, baptism
-*/
 .background {
     background-color: rgb(81, 81, 154); 
     text-align: center;
@@ -201,6 +144,12 @@ JOB TYPE HTML: give, help-out, get-connected, baptism
     font-size: 28px;
     font-weight: bold;
     color: #0066cc;
+}
+
+.heading2 {
+    color: #555;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .mini-heading {
@@ -221,34 +170,15 @@ JOB TYPE HTML: give, help-out, get-connected, baptism
 FOR PHONE
 */
 @media only screen and (min-width: 360px){
-    .navbar{
-        display:contents;  
-        text-align:center;
-    }
-
-    .watch-now{
-        display:contents;
-        align-content:center;
-        text-align:center;
-    }
-
     .slideshow{
         min-height: 30vh;
     }
-
-    .picture {
-        min-height: 30vh; 
-    }
 }
-
 /*
 FOR TABLET
 */
 @media only screen and (min-width: 768px){
-    .navbar{
-        display:flex; 
-    }
-    .picture{
+    .slideshow{
         min-height: 30vh;
     }
 }
@@ -257,13 +187,7 @@ FOR TABLET
 FOR COMPUTER
 */
 @media only screen and (min-width: 1000px){
-    .navbar{
-        display:flex;  
-    }
     .slideshow{
-        min-height: 100vh;
-    }
-    .picture{
-        min-height: 100vh;
+        min-height: 30vh;
     }
 }
