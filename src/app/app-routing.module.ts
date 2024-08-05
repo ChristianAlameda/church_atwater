@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'baptism', component: BaptismComponent},
   { path: 'help-out', component: HelpOutComponent},
   { path: 'form', component: FormComponent},
+  //todo: routing error page
 
 ]
 
