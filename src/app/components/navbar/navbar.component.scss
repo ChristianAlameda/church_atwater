@@ -94,14 +94,16 @@ NAVBAR / CONTACT-INFO
 
 @media only screen and (min-width: 360px){
     .navbar{
-        display:contents;  
-        text-align:center;
+        display:block;
+        align-items:center;
+
     }
 
     .watch-now{
         display:contents;
         align-content:center;
         text-align:center;
+        
     }
 
     .slideshow{
