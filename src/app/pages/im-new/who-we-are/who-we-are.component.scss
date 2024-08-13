@@ -132,3 +132,32 @@ h2,
     width: 100px;
     height: 100px;
 }
+
+// who we are history
+.history {
+    flex: 0 0 100%; // This makes the history section take up the full width
+    max-width: 100%;
+    padding: 20px;
+    color: wheat;
+    text-align: center;
+}
+
+.history h2 {
+    display: inline-block; /* Shrinks the background to only fit the text */
+    background-color: rgba(78, 218, 164, 0.5); /* Background color */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding inside the background */
+    text-align: center; /* Center the text within the background */
+    margin: 10px auto; /* Center the h2 element horizontally */
+    border-radius: 5px; /* Optional: Rounds the corners of the background */
+}
+
+.history .info {
+    max-width: 80%; /* Limits the width of the .info elements */
+    margin: 0 auto; /* Centers the .info element within its parent */
+    padding: 10px 20px; /* Adds some padding for better spacing */
+    background-color: rgba(218, 78, 78, 0.5); /* Keeps the background color */
+    color: white; /* Text color */
+    text-align: center; /* Centers the text inside the .info box */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}

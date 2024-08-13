@@ -67,10 +67,9 @@
 
 .slideshow {
     width: 100%;
-    // height: 300px; // Adjust based on your design
+    height: 100vh; // Adjust based on your design
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     overflow: hidden; // Ensure this is intended; it hides overflow content
   
     @keyframes slideHappenings {
@@ -84,8 +83,19 @@
         background-image: url("../../assets/img/church-saturday.jpg");
       }
     }
-  
+    
     animation: slideHappenings 12s infinite; // Adjust duration as needed
+  
+    // Add media queries for responsiveness
+    @media (max-width: 768px) {
+      height: 200px; // Adjust height for smaller screens
+      background-size: contain; // Ensure entire image fits within the container
+    }
+
+    @media (max-width: 480px) {
+        height: 150px; // Further adjust for very small screens
+        background-size: contain;
+    }
   }
   
 
@@ -164,7 +174,10 @@
     margin-top: 10px;
     display:block;
 }
-
+h2.notes{
+  background:black;
+  color:yellow;
+}
 
 /*
 FOR PHONE
