@@ -1,41 +1,44 @@
+// Variables
+$page-height: 100vh;
+$primary-bg-color: #f8f8f8;
+$primary-font-color: #555;
+$padding: 20px 30px;
+
+// Page Styles
 .page1 {
     position: relative;
     width: 100%;
-    height: 100vh; // or adjust as needed
+    height: $page-height;
     overflow: hidden;
-    
-    // Define the background images for the slideshow
+
+    // Slideshow Background Animation
     @keyframes slideBackgrounds {
-      0% {
-        background-image: url("../../assets/img/church-logo.jpg");
-      }
-      16.67% {
-        background-image: url("../../assets/img/church-pastor1.jpg");
-      }
-      33.33% {
-        background-image: url("../../assets/img/pastor4.jpg");
-      }
-      50% {
-        background-image: url("../../assets/img/work1.jpg");
-      }
-      66.67% {
-        background-image: url("../../assets/img/work2.jpg");
-      }
-      83.33% {
-        background-image: url("../../assets/img/work3.jpg");
-      }
-      100% {
-        background-image: url("../../assets/img/church-logo.jpg");
-      }
+        0%, 100% {
+            background-image: url("../../assets/img/church-logo.jpg");
+        }
+        16.67% {
+            background-image: url("../../assets/img/church-pastor1.jpg");
+        }
+        33.33% {
+            background-image: url("../../assets/img/pastor4.jpg");
+        }
+        50% {
+            background-image: url("../../assets/img/work1.jpg");
+        }
+        66.67% {
+            background-image: url("../../assets/img/work2.jpg");
+        }
+        83.33% {
+            background-image: url("../../assets/img/work3.jpg");
+        }
     }
-    
-    animation: slideBackgrounds 18s infinite; // Adjust duration to match the number of images
+    animation: slideBackgrounds 18s infinite;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  
-// CHURCH BOX INFO
+}
+
+// Church Info Styles
 .church-info,
 .church-name,
 .church-location,
@@ -44,6 +47,7 @@
 .church-old {
     margin: 10px;
 }
+
 .church-info {
     margin: 5%;
     text-align: center;
@@ -57,59 +61,49 @@
     align-items: center;
 }
 
-.mission {
-    text-align: center;
-    padding: 20px 30px;
-    background-color: #f8f8f8;
-    margin: 0 auto; 
-    width: 50%; 
-  }
-
+// Slideshow Styles
 .slideshow {
     width: 100%;
-    height: 100vh; // Adjust based on your design
+    height: $page-height;
     background-size: cover;
     background-position: center;
-    overflow: hidden; // Ensure this is intended; it hides overflow content
-  
+    overflow: hidden;
+
     @keyframes slideHappenings {
-      0% {
-        background-image: url("../../assets/img/church-saturday.jpg");
-      }
-      50% {
-        background-image: url("../../assets/img/church-sunday.jpg");
-      }
-      100% {
-        background-image: url("../../assets/img/church-saturday.jpg");
-      }
+        0%, 100% {
+            background-image: url("../../assets/img/church-saturday.jpg");
+        }
+        50% {
+            background-image: url("../../assets/img/church-sunday.jpg");
+        }
     }
-    
-    animation: slideHappenings 12s infinite; // Adjust duration as needed
-  
-    // Add media queries for responsiveness
-    @media (max-width: 768px) {
-      height: 200px; // Adjust height for smaller screens
-      background-size: contain; // Ensure entire image fits within the container
-    }
+    animation: slideHappenings 12s infinite;
 
-    @media (max-width: 480px) {
-        height: 150px; // Further adjust for very small screens
-        background-size: contain;
-    }
-  }
-  
+    @media (max-width: 1000px) {
+        min-height: 30vh;
 
+        @media (max-width: 768px) {
+            height: 200px;
+            background-size: contain;
+        }
+
+        @media (max-width: 480px) {
+            height: 150px;
+        }
+    }
+}
+
+// Service Times Styles
 .service-times {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
     border: 2px solid #333;
     border-radius: 10px;
-    background-color: #f8f8f8;
+    background-color: $primary-bg-color;
     text-align: center;
 }
 
-// SERVICE TIMES
 .service-times-title {
     font-size: 24px;
     font-weight: bold;
@@ -123,12 +117,12 @@
 .events {
     margin-top: 8px;
     font-style: italic;
-    color: #555;
+    color: $primary-font-color;
 }
 
-.notes{
-    color:yellow;
-    text-align:center;
+.notes {
+    color: yellow;
+    text-align: center;
 }
 
 .description {
@@ -137,16 +131,18 @@
     line-height: 1.5;
 }
 
+// Mission Box
 .mission {
     text-align: center;
-    padding: 20px 30px; 
-    background-color: #f8f8f8;
-    margin: 0 auto; 
-    width: 50%; 
+    padding: $padding;
+    background-color: $primary-bg-color;
+    margin: 0 auto;
+    width: 50%;
 }
 
+// Background and Headings
 .background {
-    background-color: rgb(81, 81, 154); 
+    background-color: rgb(81, 81, 154);
     text-align: center;
 }
 
@@ -157,7 +153,7 @@
 }
 
 .heading2 {
-    color: #555;
+    color: $primary-font-color;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -172,35 +168,9 @@
     line-height: 1.6;
     color: #666;
     margin-top: 10px;
-    display:block;
-}
-h2.notes{
-  background:black;
-  color:yellow;
 }
 
-/*
-FOR PHONE
-*/
-@media only screen and (min-width: 360px){
-    .slideshow{
-        min-height: 30vh;
-    }
-}
-/*
-FOR TABLET
-*/
-@media only screen and (min-width: 768px){
-    .slideshow{
-        min-height: 30vh;
-    }
-}
-
-/*
-FOR COMPUTER
-*/
-@media only screen and (min-width: 1000px){
-    .slideshow{
-        min-height: 30vh;
-    }
+h2.notes {
+    background: black;
+    color: yellow;
 }

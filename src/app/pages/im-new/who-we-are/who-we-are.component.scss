@@ -1,32 +1,35 @@
-//header
+$primary-bg-color: black;
+$primary-text-color: wheat;
+$heading-color: #fff;
+$accent-bg-color: rgba(78, 218, 164, 0.5);
+$secondary-bg-color: rgba(218, 78, 78, 0.5);
+$image-size: 100px;
+$container-padding: 20px;
+
+// Heading Styles
 .heading {
-    text-align:center;
+    text-align: center;
     font-size: 2em;
-    color: #fff; /* Set text color to white */
-    margin-bottom: 20px; /* Add some space below the heading */
+    color: $heading-color;
+    margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: $heading-color;
+        margin: 10px auto;
+    }
 }
 
-.heading::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #fff; /* Set line color to white */
-    margin: 10px auto; /* Center the line and add space around it */
-}
-
-
-// CONTAINERS
-div.container {
-    background-color: black;
-}
-
+// Container Styles
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // height: 50vh;
+    background-color: $primary-bg-color;
 }
 
 .item-container {
@@ -35,129 +38,108 @@ div.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: $container-padding;
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    &:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    img {
+        width: 50%;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
 }
 
-.item-container img {
-    width: 50%;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    margin:10px;
-}
-
+// Info Container Styles
 .info-container {
-    color:wheat;
+    color: $primary-text-color;
     text-align: center;
+
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #d1c2c2;
+        margin: 0px 5px;
+    }
 }
 
-.info-container h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.info-container p {
-    color: #d1c2c2;
-    margin: 0px 5px;
-}
-
-.item-container:nth-child(even) {
-    flex-direction: row-reverse;
-    align-content: center;
-}
-
-.item-container:nth-child(odd) {
-    flex-direction: row;
-    align-content:center;
-
-}
-
-// TEXT INSIDE CONTAINERS
-h2{
-    background-color:rgba(78, 218, 164, 0.5);
-}
-
-.info{
-    background-color:rgba(218, 78, 78, 0.5);
-}
-
+// Text Inside Containers
 h2,
 .info {
+    background-color: $accent-bg-color;
     color: white;
 }
 
-///PICTURES FOR ALL THE PEOPLE
-.dan img {
-    background-image: url("../../../assets/img/people/dan-pastor.jpg"); /* Correct the path */
+.info {
+    background-color: $secondary-bg-color;
+}
+
+// Person Image Styles
+.dan img,
+.eddie img,
+.chery img,
+.charice img,
+.keston img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: $image-size;
+    height: $image-size;
+}
+
+.dan img {
+    background-image: url("../../../assets/img/people/dan-pastor.jpg");
 }
 
 .eddie img {
-    background-image: url("../../../assets/img/people/eddie1.jpg"); /* Correct the path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100px;
-    height: 100px;
+    background-image: url("../../../assets/img/people/eddie1.jpg");
 }
+
 .chery img {
-    background-image: url("../../../assets/img/people/chery.jpg"); /* Correct the path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100px;
-    height: 100px;
+    background-image: url("../../../assets/img/people/chery.jpg");
 }
+
 .charice img {
-    background-image: url("../../../assets/img/people/man1.jpg"); /* Correct the path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100px;
-    height: 100px;
+    background-image: url("../../../assets/img/people/man1.jpg");
 }
+
 .keston img {
-    background-image: url("../../../assets/img/people/keston.jpg"); /* Correct the path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100px;
-    height: 100px;
+    background-image: url("../../../assets/img/people/keston.jpg");
 }
 
-// who we are history
+// Who We Are History Styles
 .history {
-    flex: 0 0 100%; // This makes the history section take up the full width
+    flex: 0 0 100%;
     max-width: 100%;
-    padding: 20px;
-    color: wheat;
+    padding: $container-padding;
+    color: $primary-text-color;
     text-align: center;
-}
 
-.history h2 {
-    display: inline-block; /* Shrinks the background to only fit the text */
-    background-color: rgba(78, 218, 164, 0.5); /* Background color */
-    color: white; /* Text color */
-    padding: 5px 10px; /* Padding inside the background */
-    text-align: center; /* Center the text within the background */
-    margin: 10px auto; /* Center the h2 element horizontally */
-    border-radius: 5px; /* Optional: Rounds the corners of the background */
-}
+    h2 {
+        display: inline-block;
+        background-color: $accent-bg-color;
+        color: white;
+        padding: 5px 10px;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
 
-.history .info {
-    max-width: 80%; /* Limits the width of the .info elements */
-    margin: 0 auto; /* Centers the .info element within its parent */
-    padding: 10px 20px; /* Adds some padding for better spacing */
-    background-color: rgba(218, 78, 78, 0.5); /* Keeps the background color */
-    color: white; /* Text color */
-    text-align: center; /* Centers the text inside the .info box */
-    border-radius: 5px; /* Optional: Adds rounded corners */
+    .info {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: $secondary-bg-color;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+    }
 }
