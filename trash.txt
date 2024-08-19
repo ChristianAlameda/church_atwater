@@ -28,6 +28,23 @@ church_atwater
 branchname: developer
 
 
+npm install -g depcheck
+
+depcheck
+
+npm uninstall @ng-icons/core ionicons tslib
+
+npm uninstall --save-dev @angular-devkit/build-angular @angular/compiler-cli @ionic/angular-toolkit @tailwindcss/forms autoprefixer jasmine-core karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter postcss tailwindcss
+
+
+cd ../
+
+npm install angular/cli
+
+npm install
+
+
+
 
 
 
