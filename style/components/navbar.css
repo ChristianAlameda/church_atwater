@@ -1,6 +1,4 @@
-/* 
-FOR THE DROP DOWN
-*/
+/* General Navbar Styles */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -52,13 +50,8 @@ FOR THE DROP DOWN
 .navbar .dropdown-content a:hover {
     background-color: #ddd;
 }
-/*
-END DROPDOWN
-*/
 
-/* 
-NAVBAR / CONTACT-INFO
-*/
+/* Logo and Button Alignment */
 .church-logo,
 .item-list,
 .navbar,
@@ -73,15 +66,14 @@ NAVBAR / CONTACT-INFO
 }
 
 .church-logo img {
-    background-image: url("../../assets/img/church-logo.jpg"); /* Correct the path */
+    background-image: url("../../assets/img/church-logo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     width: 100px;
     height: 100px;
-  }
-  
+}
 
 .navbar {
     display: flex;
@@ -90,50 +82,45 @@ NAVBAR / CONTACT-INFO
 }
 
 
-@media only screen and (min-width: 360px){
-    .navbar{
-        display: contents;  
+
+/* Mobile Screen Adjustments */
+@media only screen and (max-width: 768px) {
+    
+    
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar li {
+        width: 100%;
         text-align: center;
     }
 
-    .watch-now{
-        display: contents;
-        align-content: center;
-        text-align: center;
+    .navbar .church-logo {
+        margin-bottom: 10px;
     }
 
-    .slideshow{
-        min-height: 30vh;
-    }
-
-    .picture {
-        min-height: 30vh; 
+    .watch-now {
+        margin-top: 10px;
     }
 }
 
-/*
-FOR TABLET
-*/
-@media only screen and (min-width: 768px){
-    .navbar{
-        display: flex; 
-    }
-    .picture{
-        min-height: 30vh;
+/* Tablet Screen Adjustments */
+@media only screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
     }
 }
 
-/*
-FOR COMPUTER
-*/
-@media only screen and (min-width: 1000px){
-    .navbar{
-        display: flex;  
-    }
-    .slideshow{
-        min-height: 100vh;
-    }
-    .picture{
-        min-height: 100vh;
+/* Desktop Screen Adjustments */
+@media only screen and (min-width: 1000px) {
+    .navbar {
+        display: flex;
     }
 }
