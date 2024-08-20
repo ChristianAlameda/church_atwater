@@ -1,3 +1,16 @@
+/* Group pictures would be great */
+/* @keyframes slideBackgrounds {
+    0% {
+        background-image: url("../../img/people/dan-pastor.jpg");
+    }
+    50.00% {
+        background-image: url("../../img/church-pastor1.jpg");
+    }
+    100.00% {
+        background-image: url("../../img/pastor4.jpg");
+    }
+} */
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -72,19 +85,24 @@ h2,
 }
 
 .eddie img {
-    background-image: url("../img/people/dan-pastor.jpg");
+    background-image: url("../img/people/eddie.jpg");
 }
 
 .chery img {
-    background-image: url("../img/people/dan-pastor.jpg");
+    background-image: url("../img/people/chery.jpg");
 }
 
 .charice img {
+    /* need one for charice */
     background-image: url("../img/people/dan-pastor.jpg");
 }
 
 .keston img {
-    background-image: url("../img/people/dan-pastor.jpg");
+    background-image: url("../img/people/keston.jpg");
+}
+
+.tim img {
+    background-image: url("../img/people/tim.jpg");
 }
 
 .history {

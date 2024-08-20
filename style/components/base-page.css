@@ -32,19 +32,19 @@
         background-image: url("../../img/people/dan-pastor.jpg");
     }
     16.67% {
-        background-image: url("../../img/church-pastor1.jpg");
+        background-image: url("../../img/pastor/church-pastor1.jpg");
     }
     33.33% {
-        background-image: url("../../img/pastor4.jpg");
+        background-image: url("../../img/pastor/pastor4.jpg");
     }
     50% {
-        background-image: url("../../img/work1.jpg");
+        background-image: url("../../img/work/work1.jpg");
     }
     66.67% {
-        background-image: url("../../img/work2.jpg");
+        background-image: url("../../img/work/work2.jpg");
     }
     83.33% {
-        background-image: url("../../img/work3.jpg");
+        background-image: url("../../img/work/work3.jpg");
     }
     100% {
         background-image: url("../../img/church-logo.jpg");

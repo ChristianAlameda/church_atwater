@@ -1,3 +1,16 @@
+/* I want good pictures of working */
+/* @keyframes slideBackgrounds {
+    0% {
+        background-image: url("../../img/people/dan-pastor.jpg");
+    }
+    50.00% {
+        background-image: url("../../img/church-pastor1.jpg");
+    }
+    100.00% {
+        background-image: url("../../img/pastor4.jpg");
+    }
+} */
+
 body{
     background-color: black;
 }
