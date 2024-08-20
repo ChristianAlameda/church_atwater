@@ -1,0 +1,132 @@
+/* Variable replacements */
+.heading {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin: 10px auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.item-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.item-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.item-container:nth-child(odd) {
+    flex-direction: row;
+}
+
+.item-container img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.info-container {
+    color: wheat;
+    text-align: center;
+}
+
+.info-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-container p {
+    color: #d1c2c2;
+    margin: 0px 5px;
+}
+
+h2,
+.info {
+    background-color: rgba(78, 218, 164, 0.5);
+    color: white;
+}
+
+.info {
+    background-color: rgba(218, 78, 78, 0.5);
+}
+
+.dan img,
+.eddie img,
+.chery img,
+.charice img,
+.keston img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.dan img {
+    background-image: url("../img/people/dan-pastor.jpg");
+}
+
+.eddie img {
+    background-image: url("../img/people/dan-pastor.jpg");
+}
+
+.chery img {
+    background-image: url("../img/people/dan-pastor.jpg");
+}
+
+.charice img {
+    background-image: url("../img/people/dan-pastor.jpg");
+}
+
+.keston img {
+    background-image: url("../img/people/dan-pastor.jpg");
+}
+
+.history {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    color: wheat;
+    text-align: center;
+}
+
+.history h2 {
+    display: inline-block;
+    background-color: rgba(78, 218, 164, 0.5);
+    color: white;
+    padding: 5px 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.history .info {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: rgba(218, 78, 78, 0.5);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}

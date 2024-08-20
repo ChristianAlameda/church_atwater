@@ -3,85 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/button.css">
+    
+    <link rel="stylesheet" href="../style/components/navbar.css">
+    <link rel="stylesheet" href="../style/components/footer.css">
+    <link rel="stylesheet" href="../style/components/header.css">
+
+    <link rel="stylesheet" href="../style/who-we-are.css">
+
+    <link rel="stylesheet" href="../style/buttons/button.css">
     <title>Atwater Church</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-        }
-
-        .item-container {
-            flex: 0 0 50%;
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .item-container img {
-            width: 50%;
-            border-radius: 50%;
-            margin-bottom: 10px;
-            margin:10px;
-        }
-
-        .info-container {
-            color:wheat;
-            text-align: center;
-        }
-
-        .info-container h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .info-container p {
-            color: #d1c2c2;
-            margin: 0px 5px;
-        }
-
-        /* Alternating left-to-right layout */
-        .item-container:nth-child(even) {
-            flex-direction: row-reverse;
-            align-content: center;
-        }
-
-        /* Adjust the order for odd containers */
-        .item-container:nth-child(odd) {
-            flex-direction: row;
-            align-content:center;
-
-        }
-
-        h2{
-            background-color:rgba(78, 218, 164, 0.5);
-        }
-
-        .info{
-            background-color:rgba(218, 78, 78, 0.5);
-        }
-
-        h2,
-        .info {
-            color: white;
-        }
-        
-
-    </style>
 </head>
 <body>
+    <!-- Contact info Header up top -->
     <div class="contact-info">
         <div class="phone">   📞 209.358.8110</div>
         <div class="email">   📧 atwaternazarene@gmail.com</div>
@@ -101,7 +34,8 @@
             </a>
         </div>
     </div>
-    <div class="page1">
+    <!-- Navba/Opening to page with Page Header -->
+    <body class="page1">
         <div class="navbar">
             <div class="church-logo">
                 <a href="../index.html">
@@ -132,71 +66,138 @@
                 <button class="button-64" role="button" onclick="navigateToPage1('https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09')"><span class="text">WATCH NOW</span></button>
             </div>
         </div>
-        <!-- START OF PAGE -->
-        <div class="picture">
-            <div class="heading" style="color:aliceblue">
-                WHO WE ARE
-            </div>
+        <div class="heading">
+            WHO WE ARE
         </div>
-        <div class="container">
-            <div class="item-container">
-                <img src="../img/people/dan-pastor.jpg" alt="Person Image 2">
-                <div class="info-container">
-                    <h2>Dan Glaesar</h2>
-                    <div class="info">
-                        <p>Job Title: Pastor</p>
-                        <p>Email: jglaesar@gmail.com</p>
-                        <p>Brief Description: Bright young talent coming from Atwater California, full time pastor, part time jujutsu enthusiast</p>
-                    </div>
-                </div>
+    <div class="container">
+        <!-- DAN -->
+        <div class="item-container">
+            <div class="dan">
+                <a><img></a>
             </div>
-            <div class="item-container">
-                <img src="../img/people/chery.jpg" alt="Person Image 1">
-                <div class="info-container">
-                    <h2>Chery</h2>
-                    <div class="info">
-                        <p>Job Title: Treasurer / Board Member</p>
-                        <p>Email: chery@gmail.com</p>
-                        <p>Brief Description: Nice, open to talk to, bible enthusiast </p>
-                    </div>
-                </div>
-            </div>
-            <div class="item-container">
-                <img src="../img/people/girl1.jpg" alt="Person Image 2">
-                <div class="info-container">
-                    <h2>Nancy</h2>
-                    <div class="info">
-                        <p>Job Title: Board Member</p>
-                        <p>Email: nancy@gmail.com</p>
-                        <p>Brief Description: Great to know, lover of Jesus</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item-container">
-                <img src="../img/people/keston.jpg" alt="Person Image 2">
-                <div class="info-container">
-                    <h2>Keston Gartroph</h2>
-                    <div class="info">
-                        <p>Job Title: Board Member | Vocalist | Guitarist</p>
-                        <p>Email: kgartroph@gmail.com</p>
-                        <p>Brief Description: Guitar enthusiast, loves long walks on the beach</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item-container">
-                <img src="../img/people/man1.jpg" alt="Person Image 2">
-                <div class="info-container">
-                    <h2>Man 1</h2>
-                    <div class="info">
-                        <p>Job Title: Board Memeber | Vocalist</p>
-                        <p>Email: guy.1@gmail.com</p>
-                        <p>Brief Description: Football enthusiast. Christ Believer</p>
-                    </div>
+            <div class="info-container">
+                <h2>Dan Glaesar</h2>
+                <div class="info">
+                    <p>Job Title: Pastor</p>
+                    <p>Email: jglaesar&#64;gmail.com</p>
+                    <p>Brief Description: Bright young talent coming from Atwater California, full time pastor, part time jujutsu enthusiast</p>
                 </div>
             </div>
         </div>
+        <!-- Eddie -->
+        <div class="item-container">
+            <div class="eddie">
+                <a><img></a>
+            </div>
+            <div class="info-container">
+                <h2>Eddie Martinez</h2>
+                <div class="info">
+                    <p>Job Title: Pastor of Spanish Church</p>
+                    <p>Email: eddie&#64;gmail.com</p>
+                    <p>Brief Description: Nice, open to talk to, bible enthusiast</p>
+                </div>
+            </div>
+        </div>
+        <!-- Chery -->
+        <div class="item-container">
+            <div class="chery">
+                <a><img></a>
+            </div>
+            <div class="info-container">
+                <h2>Chery</h2>
+                <div class="info">
+                    <p>Job Title: Board Member | Treasurer </p>
+                    <p>Email: chery&#64;gmail.com</p>
+                    <p>Brief Description: Nice, open to talk to, bible enthusiast</p>
+                </div>
+            </div>
+        </div>
+        <!-- Charice -->
+        <div class="item-container">
+            <div class="charice">
+                <a><img></a>
+            </div>
+            <div class="info-container">
+                <h2>Charice</h2>
+                <div class="info">
+                    <p>Job Title: Board Member | Treasurer | Facility Manager</p>
+                    <p>Email: kgartroph&#64;gmail.com</p>
+                    <p>Brief Description: Guitar enthusiast, loves long walks on the beach</p>
+                </div>
+            </div>
+        </div>
+        <!-- Keston -->
+        <div class="item-container">
+            <div class="keston">
+                <a><img></a>
+            </div>
+            <div class="info-container">
+                <h2>Keston Gartroph</h2>
+                <div class="info">
+                    <p>Job Title: Board Member | Vocalist | Guitarist</p>
+                    <p>Email: kgartroph&#64;gmail.com</p>
+                    <p>Brief Description: Guitar enthusiast, loves long walks on the beach</p>
+                </div>
+            </div>
+        </div>
+        <div class="item-container">
+            <div class="keston">
+                <a><img></a>
+            </div>
+            <div class="info-container">
+                <h2>Timothy Long</h2>
+                <div class="info">
+                    <p>Job Title: Board Member | Incoming Pastor</p>
+                    <p>Email: tlong&#64;gmail.com</p>
+                    <p>Brief Description: loves accounting and long walks on the beach</p>
+                </div>
+            </div>
+        </div>
+        <!-- Start of history of who we are -->
+        <div class="history">
+            <h1>
+                HISTORY OF US
+            </h1>
+            <div>
+                <div>
+                    <h2>Where We Started</h2>
+                    <div class="info">
+                        We began our journey in 1908 through the merging of three holiness movements. From those early days, we rapidly grew, reaching across the globe with our missions and church planting efforts.
+                        <br>As we expanded, we established numerous educational institutions and significantly grew our missionary work, becoming a major force in global evangelism and education.
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>Where We Are Now</h2>
+                    <div class="info">
+                        Today, we’re proud to operate in over 160 countries, actively engaged in global missions, compassionate ministries, and educational initiatives.
+                        <br>We face challenges such as declining enrollments and financial pressures, but we are adapting our strategies to ensure we maintain our impact and relevance.
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>Where We Are Going</h2>
+                    <div class="info">
+                        Looking ahead, we are embracing innovative digital outreach and mission strategies to connect with new generations and meet emerging global needs.
+                        <br>We’re focusing on enhancing our global collaborations and optimizing resources to further amplify our worldwide mission and effectiveness.
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <br>
+        <br>
     </div>
-    <script src="../js/script.js"></script>
+    <div class="body">
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Your Website</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-believe.html">About</a></li>
+                    <li><a href="who-we-are.html">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
