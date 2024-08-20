@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/button.css">
-    <link rel="stylesheet" href="../style/button1.css">
+    <!-- add the components -->
+    <link rel="stylesheet" href="../style/components/navbar.css">
+    <link rel="stylesheet" href="../style/components/footer.css">
+    <link rel="stylesheet" href="../style/components/header.css">
+    <link rel="stylesheet" href="../style/components/base-page.css">
+    <!-- add the button -->
+    <link rel="stylesheet" href="../style/buttons/button.css">
+    <!-- add the additional css for this page only -->
+    <link rel="stylesheet" href="../style/help-out.css">
+    <script src="../js/form-handler.js" defer></script>
+    <script src="../js/routing.js" defer></script>
+
     <title>Atwater Church</title>
 </head>
 <body>
+    <!-- Contact info Header up top -->
     <div class="contact-info">
         <div class="phone">   📞 209.358.8110</div>
         <div class="email">   📧 atwaternazarene@gmail.com</div>
         <div class="location">📍 1374 Shaffer Rd., Atwater, CA. 95301</div>
         <div class="youtube">
-            <a href="https://www.youtube.com/channel/UCNAla0fZR8QFzsclS9i33vw?view_as=subscriber">
+            <a href="https://www.youtube.com/@AtwaterNazarene">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
                     <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
                 </svg>
@@ -28,6 +38,7 @@
             </a>
         </div>
     </div>
+    <!-- Navba/Opening to page with Page Header -->
     <div class="page1">
         <div class="navbar">
             <div class="church-logo">
@@ -47,51 +58,81 @@
                 <li class="dropdown">
                     <a href="#">Next Steps</a>
                     <div class="dropdown-content">
-                        <a href="get-connected.html">Get Connected</a>
                         <a href="baptism.html">Baptism</a>
                         <a href="help-out.html">Help Out</a>
                     </div>
                 </li>
                 <li><a href="../index.html">Events</a></li>
-                <li><a href="give.html">Give</a></li>
+                <li><a href="https://engage.suran.com/atwaternaz/s/login">Give</a></li>
             </ul>
             <div class="watch-now">
-                <button class="button-64" role="button" onclick="navigateToPage1('https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09')"><span class="text">WATCH NOW</span></button>
+                <button class="button-64" role="button" onclick="goToUrl('https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09')"><span class="text">WATCH NOW</span></button>
             </div>
         </div>
-        <!-- START OF PAGE -->
-        <div class="picture">
-            <div class="heading">
-                SERVE ON A TEAM
-            </div>
+        <div class="heading">
+            HELP OUT
         </div>
-        <div class="background">
-            <div class="heading1">
-                Serve on a Team
+    </div>
+    <!-- start of the HELP OUT page -->
+    <div class="background">
+        <div class="heading1">
+            Serve on a Team
+        </div>
+        <div class="mini-heading">
+            Church would not be able to function without the help of volunteers!!
+        </div>
+        <div class="explanation">
+            Hebrews 12:28-29 (NIV): "Therefore, since we are receiving a kingdom that cannot be shaken, let us be thankful, and so worship God acceptably with reverence and awe, for our 'God is a consuming fire.'"
+            <br>
+            
+        </div>
+        <div class="jobs">
+            <div class="explanation">
+                To be notified on your choice of sunday services or the weekend church distribution
             </div>
+            <form id="signUpForm" method="post" action="https://app.flocknote.com/group/419646/addToGroupFromOutside" target="_blank">
+                <input type="text" name="fname" placeholder="First Name" required />
+                <input type="text" name="lname" placeholder="Last Name" required />
+                <input type="email" name="email" placeholder="Email Address" required />
+                <input type="tel" name="mobile_phone" placeholder="Mobile Phone" required />
+                <button type="submit" value="submit">Sign Me Up</button>
+            </form>
+        </div>
+        <div class="jobs">
             <div class="mini-heading">
-                Church would not be able to function without the help of volunteers!!
+                HOW TO HELP OUT AT THE FOOD PANTRY
             </div>
             <div class="explanation">
-                Hebrews 12:28-29 (NIV): "Therefore, since we are receiving a kingdom that cannot be shaken, let us be thankful, and so worship God acceptably with reverence and awe, for our 'God is a consuming fire.'"
-                <br>
-                
+                Volunteering at the food pantry is a profoundly rewarding experience that goes beyond simply giving food to those in need; 
+                <br>it’s about sharing hope, compassion, and community spirit. When you volunteer, you become part of a dedicated team working 
+                <br>tirelessly to ensure that families facing hardships do not go hungry.
+                <br>CALL 209-358-8110 FOR MORE DETAILS
             </div>
-            <div class="jobs">
-                <button class="button-79" role="button" onclick="navigateToPage1('../index/jobs/job1.html')"><span class="text">Job 1</span></button>
-                <div class="job-description">
-                    Works easy hours
-                </div>
-                <button class="button-79" role="button" onclick="navigateToPage1('../index/jobs/job2.html')"><span class="text">Job 2</span></button>
-                <div class="job-description">
-                    Works hard hours
-                </div>
+        </div>
+        <div class="jobs">
+            <div class="mini-heading">
+                HOW TO BECOME A MEMBER
+            </div>
+            <div class="explanation">
+                You must go through a class on what the Nazarene Church believes<br>
+                You must understand what we believe and agree to not do things directly opposed<br>
+                to what we believe.<br>
+                CALL 209-358-8110 FOR MORE DETAILS
             </div>
         </div>
     </div>
-    
-    
-
-    <script src="../js/script.js"></script>
-</body>
+    <!-- footer -->
+    <div class="body">
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Christian Alameda</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-believe.html">About</a></li>
+                    <li><a href="who-we-are.html">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>
 </html>
