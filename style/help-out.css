@@ -1,15 +1,29 @@
 /* I want good pictures of working */
-/* @keyframes slideBackgrounds {
+/* slideshow for every page */
+.page1 {
+    animation: slideBackgrounds 10s infinite;
+}
+
+@keyframes slideBackgrounds {
+    /* 
+    work1
+    work2
+    work3
+    work8
+    */
     0% {
-        background-image: url("../../img/people/dan-pastor.jpg");
+        background-image: url("../../img/work/work1.jpg");
     }
-    50.00% {
-        background-image: url("../../img/church-pastor1.jpg");
+    33.33% {
+        background-image: url("../../img/work/work2.jpg");
+    }
+    66.66% {
+        background-image: url("../../img/work/work3.jpg");
     }
     100.00% {
-        background-image: url("../../img/pastor4.jpg");
+        background-image: url("../../img/work/work8.jpg");
     }
-} */
+}
 
 body{
     background-color: black;
