@@ -1,0 +1,903 @@
+/* base-page.component.scss */
+.page1 {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    animation: slideBackgrounds 18s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes slideBackgrounds {
+    0% {
+        background-image: url("../../assets/img/people/dan-pastor.jpg");
+    }
+    16.67% {
+        background-image: url("../../assets/img/church-pastor1.jpg");
+    }
+    33.33% {
+        background-image: url("../../assets/img/pastor4.jpg");
+    }
+    50% {
+        background-image: url("../../assets/img/work1.jpg");
+    }
+    66.67% {
+        background-image: url("../../assets/img/work2.jpg");
+    }
+    83.33% {
+        background-image: url("../../assets/img/work3.jpg");
+    }
+    100% {
+        background-image: url("../../assets/img/church-logo.jpg");
+    }
+}
+
+
+
+// Add other common styles here...
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 5vh; /* Ensure full viewport height */
+    margin: 0;
+    // height: 100vh;
+}
+
+.content {
+    flex: 1; /* Take remaining vertical space */
+    padding: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center align content */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.phone, 
+.location,
+.email, 
+.youtube, 
+.facebook{
+    margin-left:10px;
+}
+
+.contact-info {
+    color: #ffffff;
+    background-color: rgba(120, 120, 120,.9);
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text content */
+}
+
+.contact-info > * {
+margin: 0 10px; /* Adjust as needed for spacing between items */
+}
+
+
+
+
+/* CSS */
+.button-79 {
+    backface-visibility: hidden;
+    background: #332cf2;
+    border: 0;
+    border-radius: .375rem;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,Helvetica,sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+    padding: 1rem 1.25rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translateZ(0) scale(1);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-79:disabled {
+    color: #787878;
+    cursor: auto;
+  }
+  
+  .button-79:not(:disabled):hover {
+    transform: scale(1.05);
+  }
+  
+  .button-79:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(.125rem);
+  }
+  
+  .button-79:focus {
+    outline: 0 solid transparent;
+  }
+  
+  .button-79:focus:before {
+    border-width: .125rem;
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+    user-select: none;
+  }
+  
+  .button-79:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+  }
+  
+  .button-79:not(:disabled):active {
+    transform: translateY(.125rem);
+  }
+
+  
+/* 
+FOR THE DROP DOWN
+*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #555;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/*
+END DROPDOWN
+*/
+
+
+/* 
+NAVBAR / CONTACT-INFO
+*/
+.church-logo,
+.item-list,
+.navbar,
+.watch-now,
+.church-info,
+.church-name,
+.church-location,
+.church-time,
+.church-new,
+.church-old {
+    margin: 5px;
+}
+
+.church-logo img {
+    background-image: url("../../assets/img/church-logo.jpg"); /* Correct the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100px;
+    height: 100px;
+  }
+  
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media only screen and (min-width: 360px){
+    .navbar{
+        display:contents;  
+        text-align:center;
+    }
+
+    .watch-now{
+        display:contents;
+        align-content:center;
+        text-align:center;
+    }
+
+    .slideshow{
+        min-height: 30vh;
+    }
+
+    .picture {
+        min-height: 30vh; 
+    }
+}
+
+/*
+FOR TABLET
+*/
+@media only screen and (min-width: 768px){
+    .navbar{
+        display:flex; 
+    }
+    .picture{
+        min-height: 30vh;
+    }
+}
+
+/*
+FOR COMPUTER
+*/
+@media only screen and (min-width: 1000px){
+    .navbar{
+        display:flex;  
+    }
+    .slideshow{
+        min-height: 100vh;
+    }
+    .picture{
+        min-height: 100vh;
+    }
+}
+
+// Variables
+$page-height: 100vh;
+$primary-bg-color: #f8f8f8;
+$primary-font-color: #555;
+$padding: 20px 30px;
+
+// Page Styles
+.page1 {
+    position: relative;
+    width: 100%;
+    height: $page-height;
+    overflow: hidden;
+
+    // Slideshow Background Animation
+    @keyframes slideBackgrounds {
+        0%, 100% {
+            background-image: url("../../assets/img/church-logo.jpg");
+        }
+        16.67% {
+            background-image: url("../../assets/img/church-pastor1.jpg");
+        }
+        33.33% {
+            background-image: url("../../assets/img/pastor4.jpg");
+        }
+        50% {
+            background-image: url("../../assets/img/work1.jpg");
+        }
+        66.67% {
+            background-image: url("../../assets/img/work2.jpg");
+        }
+        83.33% {
+            background-image: url("../../assets/img/work3.jpg");
+        }
+    }
+    animation: slideBackgrounds 18s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Church Info Styles
+.church-info,
+.church-name,
+.church-location,
+.church-time,
+.church-new,
+.church-old {
+    margin: 10px;
+}
+
+.church-info {
+    margin: 5%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.church-new,
+.church-old {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Slideshow Styles
+.slideshow {
+    width: 100%;
+    height: $page-height;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    @keyframes slideHappenings {
+        0%, 100% {
+            background-image: url("../../assets/img/church-saturday.jpg");
+        }
+        50% {
+            background-image: url("../../assets/img/church-sunday.jpg");
+        }
+    }
+    animation: slideHappenings 12s infinite;
+
+    @media (max-width: 1000px) {
+        min-height: 30vh;
+
+        @media (max-width: 768px) {
+            height: 200px;
+            background-size: contain;
+        }
+
+        @media (max-width: 480px) {
+            height: 150px;
+        }
+    }
+}
+
+// Service Times Styles
+.service-times {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: $primary-bg-color;
+    text-align: center;
+}
+
+.service-times-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.day {
+    margin: 15px 0;
+}
+
+.events {
+    margin-top: 8px;
+    font-style: italic;
+    color: $primary-font-color;
+}
+
+.notes {
+    color: yellow;
+    text-align: center;
+}
+
+.description {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+// Mission Box
+.mission {
+    text-align: center;
+    padding: $padding;
+    background-color: $primary-bg-color;
+    margin: 0 auto;
+    width: 50%;
+}
+
+// Background and Headings
+.background {
+    background-color: rgb(81, 81, 154);
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.heading2 {
+    color: $primary-font-color;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mini-heading {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.explanation {
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+}
+
+h2.notes {
+    background: black;
+    color: yellow;
+}
+
+// HEADERS
+.heading {
+    text-align:center;
+    font-size: 2em;
+    color: #fff; /* Set text color to white */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff; /* Set line color to white */
+    margin: 10px auto; /* Center the line and add space around it */
+}
+
+.heading1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.heading2 {
+    color: #555;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+// ETC
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:black;
+}
+.background {
+    background-color: rgba(65, 181, 235, 0.7); /* Set background color for the edges */
+    align-content: center;
+    display:block;
+    padding: 20px;
+    margin-top: 20px; /* Add some space between the top content and bottom portion */
+    max-width: 60%; /* Set maximum width to hold the 3rd to 9th portions */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+.description {
+    color: #333; /* Set text color to a dark shade, you can adjust this value */
+    margin-bottom: 10px; /* Add some space below each description */
+}
+
+.description::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333; /* Set line color to a dark shade */
+    margin: 5px 0; /* Add space around the line */
+}
+
+$primary-bg-color: black;
+$primary-text-color: wheat;
+$heading-color: #fff;
+$accent-bg-color: rgba(78, 218, 164, 0.5);
+$secondary-bg-color: rgba(218, 78, 78, 0.5);
+$image-size: 100px;
+$container-padding: 20px;
+
+// Heading Styles
+.heading {
+    text-align: center;
+    font-size: 2em;
+    color: $heading-color;
+    margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: $heading-color;
+        margin: 10px auto;
+    }
+}
+
+// Container Styles
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-bg-color;
+}
+
+.item-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $container-padding;
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    &:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    img {
+        width: 50%;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+// Info Container Styles
+.info-container {
+    color: $primary-text-color;
+    text-align: center;
+
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #d1c2c2;
+        margin: 0px 5px;
+    }
+}
+
+// Text Inside Containers
+h2,
+.info {
+    background-color: $accent-bg-color;
+    color: white;
+}
+
+.info {
+    background-color: $secondary-bg-color;
+}
+
+// Person Image Styles
+.dan img,
+.eddie img,
+.chery img,
+.charice img,
+.keston img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: $image-size;
+    height: $image-size;
+}
+
+.dan img {
+    background-image: url("../../../assets/img/people/dan-pastor.jpg");
+}
+
+.eddie img {
+    background-image: url("../../../assets/img/people/eddie1.jpg");
+}
+
+.chery img {
+    background-image: url("../../../assets/img/people/chery.jpg");
+}
+
+.charice img {
+    background-image: url("../../../assets/img/people/man1.jpg");
+}
+
+.keston img {
+    background-image: url("../../../assets/img/people/keston.jpg");
+}
+
+// Who We Are History Styles
+.history {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: $container-padding;
+    color: $primary-text-color;
+    text-align: center;
+
+    h2 {
+        display: inline-block;
+        background-color: $accent-bg-color;
+        color: white;
+        padding: 5px 10px;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+
+    .info {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: $secondary-bg-color;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+//MAIN HEADING
+.heading {
+    text-align: center;
+    font-size: 2em;
+    color: #fff; /* Set text color to white */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff; /* Set line color to white */
+    margin: 10px auto; /* Center the line and add space around it */
+}
+
+.background {
+    background-color: #e6e6e6; 
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.mini-heading {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.explanation {
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+    display:block;
+}
+
+.jobs {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jobs a.job-title {
+    font-weight: bold;
+    color: #333; 
+}
+
+.jobs .job-description {
+    margin-top: 5px;
+    color: #666; 
+}
+
+.jobs a.job-title {
+    font-weight: bold;
+    color: #333; 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.jobs a.job-title:hover {
+    color: #0066cc; 
+    text-decoration: none; 
+}
+
+// MAIN HEADING
+.heading {
+    text-align: center;
+    font-size: 2em;
+    color: #fff; /* Set text color to white */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff; /* Set line color to white */
+    margin: 10px auto; /* Center the line and add space around it */
+}
+// REST OF THE PAGE
+.background {
+    background-color: #e6e6e6; 
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.mini-heading {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.explanation {
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+    display:block;
+}
+
+.jobs {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jobs a.job-title {
+    font-weight: bold;
+    color: #333; 
+}
+
+.jobs .job-description {
+    margin-top: 5px;
+    color: #666; 
+}
+
+.jobs a.job-title {
+    font-weight: bold;
+    color: #333; 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.jobs a.job-title:hover {
+    color: #0066cc; 
+    text-decoration: none; 
+}
+
+
+
