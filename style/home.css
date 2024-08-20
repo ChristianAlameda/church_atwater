@@ -1,0 +1,114 @@
+/* first part */
+.church-info {
+    margin: 5%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.church-new,
+.church-old {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* show all things we have */
+.notes {
+    color: yellow;
+    background-color:black;
+    text-align:center;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    animation: slideHappenings 12s infinite;
+}
+
+/* Keyframe animation */
+@keyframes slideHappenings {
+    0%, 100% {
+        background-image: url("../img/church-saturday.jpg");
+    }
+    50% {
+        background-image: url("../img/church-sunday.jpg");
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .slideshow {
+        min-height: 30vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .slideshow {
+        height: 200px;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow {
+        height: 150px;
+    }
+}
+
+/* after slideshow */
+.mission {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* service times  */
+.service-times {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.service-times-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.day {
+    margin: 15px 0;
+}
+
+.events {
+    margin-top: 8px;
+    font-style: italic;
+    color: #555;
+}
+
+
+.heading1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.heading2 {
+    color: #555;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.5;
+}

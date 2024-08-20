@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/button.css">
+    <!-- add the components -->
+    <link rel="stylesheet" href="../style/components/navbar.css">
+    <link rel="stylesheet" href="../style/components/footer.css">
+    <link rel="stylesheet" href="../style/components/header.css">
+    <link rel="stylesheet" href="../style/components/base-page.css">
+    <!-- add the button -->
+    <link rel="stylesheet" href="../style/buttons/button.css">
+    <!-- add the additional css for this page only -->
+     <link rel="stylesheet" href="../style/home.css">
+     <!-- title of page -->
     <title>Atwater Church</title>
 </head>
 <body>
+    <!-- Contact info Header up top -->
     <div class="contact-info">
         <div class="phone">   📞 209.358.8110</div>
         <div class="email">   📧 atwaternazarene@gmail.com</div>
         <div class="location">📍 1374 Shaffer Rd., Atwater, CA. 95301</div>
-        <!-- 
-            <div class="youtube">
+        <div class="youtube">
             <a href="https://www.youtube.com/channel/UCNAla0fZR8QFzsclS9i33vw?view_as=subscriber">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
                     <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
                 </svg>
             </a>
         </div>
-        -->
         <div class="facebook">
             <a href="https://www.facebook.com/AFCN-Atwater-First-Church-of-the-Nazarene-246663692052115/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -29,40 +36,45 @@
             </a>
         </div>
     </div>
+    <!-- Navba/Opening to page with Page Header -->
     <div class="page1">
         <div class="navbar">
             <div class="church-logo">
-                <a href="./index.html">
-                    <img src="./img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
+                <a href="../index.html">
+                    <img src="../img/church-logo.jpg" alt="church logo of Atwater" width="100" height="100">
                 </a>
             </div>
             <ul class="item-list">
                 <li class="dropdown">
                     <a href="#">I'm New</a>
                     <div class="dropdown-content">
-                        <a href="./index/who-we-are.html">Who We Are</a>
-                        <a href="#service-times">Service Times</a>
-                        <a href="./index/what-we-believe.html">What We Believe</a>
+                        <a href="who-we-are.html">Who We Are</a>
+                        <a href="../index.html">Service Times</a>
+                        <a href="what-we-believe.html">What We Believe</a>
                     </div>
                 </li>
                 <li class="dropdown">
                     <a href="#">Next Steps</a>
                     <div class="dropdown-content">
-                        <a href="./index/get-connected.html">Get Connected</a>
-                        <a href="./index/baptism.html">Baptism</a>
-                        <a href="./index/help-out.html">Help Out</a>
+                        <a href="get-connected.html">Get Connected</a>
+                        <a href="baptism.html">Baptism</a>
+                        <a href="help-out.html">Help Out</a>
                     </div>
                 </li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="./index/give.html">Give</a></li>
+                <li><a href="../index.html">Events</a></li>
+                <li><a href="give.html">Give</a></li>
             </ul>
             <div class="watch-now">
                 <button class="button-64" role="button" onclick="navigateToPage1('https://us02web.zoom.us/j/85831560269?pwd=alhzVml1TG1sMFd5SzJYV1V6MlQzdz09')"><span class="text">WATCH NOW</span></button>
             </div>
         </div>
+
         <div class="church-info">
-            <div class="church-name">FIRST CHURCH OF THE NAZARENE</div>
-            <div class="church-location">ATWATER</div><br>
+            <div class="heading">
+                FIRST CHURCH OF THE NAZARENE
+                <br>
+                ATWATER
+            </div>
             <div class="church-new">
                 <button class="button-64" role="button" onclick="navigateToPage2('./index/what-we-believe.html')"><span class="text">NEW? START HERE</span></button>
             </div>
@@ -71,13 +83,13 @@
             </div>
         </div>
     </div>
-    <!--SLIDESHOW-->
-    
+    <!-- start of the home page -->
+    <!-- Slideshow of What events are coming up -->
     <h1 class="notes">
         WEEKLY, MONTHLY, AND ANNUAL EVENTS
     </h1>
-    <div class="slideshow" id="events"></div>
-    <!--MISSION-->
+    <div class="slideshow"></div>
+    <!-- Mission Statement -->
     <h1 class="notes">MISSION STATEMENT</h1>
     <div class="mission">
         <h1 class="heading1">
@@ -91,7 +103,7 @@
             We desire to be a dynamic community of faith: “living lives worthy of the gospel of Christ, standing firm in one spirit and striving side by side with one mind for the faith of the gospel” (Philippians 1:27).
         </h2>
     </div>
-    <!--SERVICE TIMES-->
+    <!-- Service times -->
     <div class="service-times" id="service-times">
         <div class="service-times-title">
             SERVICE TIMES
@@ -123,72 +135,18 @@
             </div>
         </div>
     </div>
-    <script>
-        let currentSlide = 0;
-        const backgrounds = [
-            'url("./img/church-logo.jpg")',
-            'url("./img/church-pastor1.jpg")',
-            // 'url("https://ChristianAlameda.github.io/church_atwater/img/pastor2.jpg")',
-            // 'url("https://ChristianAlameda.github.io/church_atwater/img/pastor3.jpg")',
-            //
-            //'url("./img/pastor2.jpg")', // don't work
-            //'url("./img/pastor3.jpg")', // don't work
-            'url("./img/pastor4.jpg")',
-            'url("https://ChristianAlameda.github.io/church_atwater/img/work1.jpg")',
-            'url("https://ChristianAlameda.github.io/church_atwater/img/work2.jpg")',
-            'url("https://ChristianAlameda.github.io/church_atwater/img/work3.jpg")',
-
-            //'url("./img/work1.jpg")',
-            //'url("./img/work2.jpg")',
-            //'url("./img/work3.jpg")'
-
-
-
-
-            //'url("../img/church-pastor3.jpg")',
-
-            // Add more image URLs as needed
-        ];
-
-        function nextBackground() {
-            currentSlide = (currentSlide + 1) % backgrounds.length;
-            document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
-        }
-
-        // Change background every 3 seconds
-        setInterval(nextBackground, 3000);
-
-        // Initial display
-        document.querySelector('.page1').style.backgroundImage = backgrounds[currentSlide];
-        
-        ////////////////////////////////////////////
-        ////////////////////////////////////////////
-        ////////////////////////////////////////////
-        ////////////////////////////////////////////
-        ////////////////////////////////////////////
-        ////////////////////////////////////////////
-
-        //SLIDESHOW2: index.html
-        let curr = 0
-        const happenings = [
-            'url("./img/church-saturday.jpg")',
-            'url("./img/church-sunday.jpg")'
-            // Add more image URLs as needed
-        ];
-        // SAME THING BUT FOR THE SECOND SLIDESHOW
-        function nextBackground1() {
-            curr = (curr + 1) % happenings.length;
-            document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
-        }
-
-        // Change background every 6 seconds
-        setInterval(nextBackground1, 6000);
-
-        // Initial display
-        document.querySelector('.slideshow').style.backgroundImage = happenings[curr];
-    
-    
-    </script>
-    <script src="./js/script.js"></script>
+    <!-- footer -->
+    <div class="body">
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Christian Alameda</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-believe.html">About</a></li>
+                    <li><a href="who-we-are.html">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
