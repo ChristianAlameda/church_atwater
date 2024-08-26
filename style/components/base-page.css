@@ -50,3 +50,7 @@
         background-image: url("../../img/church-logo.jpg");
     }
 }
+
+a {
+    text-decoration: none; /* Remove underline */
+}

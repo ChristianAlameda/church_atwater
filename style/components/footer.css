@@ -6,10 +6,11 @@
 
 
 .body {
+
     display: flex;
     flex-direction: column;
     min-height: 5vh; /* Ensure full viewport height */
-    margin: 0;
+    margin-top: 5vh;
     /* height: 100vh; */
 }
 

@@ -46,6 +46,10 @@
     align-items: center;
 }
 
+a {
+    text-decoration: none; /* Remove underline */
+}
+
 /* show all things we have */
 .notes {
     color: yellow;
