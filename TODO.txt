@@ -1,2 +1,0 @@
-have service times go to the service times
-have events go to the events

@@ -4,9 +4,10 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    background-color: black;
 
     @keyframes slideBackgrounds {
-        0%, 100% {
+        0% {
             background-image: url("../img/church-logo.jpg");
         }
         16.67% {
@@ -23,6 +24,9 @@
         }
         83.33% {
             background-image: url("../img/work/work3.jpg");
+        }
+        100.00%{
+            background-image: url("../img/pastor/pastor2.jpg")
         }
     }
     animation: slideBackgrounds 18s infinite;

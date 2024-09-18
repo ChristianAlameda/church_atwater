@@ -1,17 +1,12 @@
-/* Group pictures would be great */
-
 /* slideshow for every page */
 .page1 {
     animation: slideBackgrounds 10s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @keyframes slideBackgrounds {
-    /* 
-    together
-    together1
-    together2
-    together3
-    */
     0% {
         background-image: url("../../img/group/together.jpg");
     }
@@ -21,9 +16,16 @@
     66.66% {
         background-image: url("../../img/group/together1.jpg");
     }
-    100.00% {
+    100% {
         background-image: url("../../img/group/together3.jpg");
     }
+}
+
+/* Fix the container overflow issue */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .container {
@@ -32,6 +34,7 @@
     justify-content: center;
     align-items: center;
     background-color: black;
+    width: 100%; /* Ensure container fits within the viewport */
 }
 
 .item-container {
@@ -41,6 +44,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    /* Removed box-sizing: border-box to prevent edge addition */
 }
 
 .item-container:nth-child(even) {
@@ -82,11 +86,36 @@ h2,
     background-color: rgba(218, 78, 78, 0.5);
 }
 
-.dan img,
-.eddie img,
-.chery img,
-.charice img,
-.keston img,
+/* Team member images */
+.dan img {
+    background-image: url("../../img/people/dan-pastor.jpg");
+}
+
+.eddie img {
+    background-image: url("../../img/people/eddie.jpg");
+}
+
+.cheri img {
+    background-image: url("../../img/people/cheri.jpg");
+}
+
+.charice img {
+    background-image: url("../../img/people/charice.jpg");
+}
+
+.keston img {
+    background-image: url("../../img/people/keston.jpg");
+}
+
+.tim img {
+    background-image: url("../../img/people/tim.jpg");
+}
+
+.dan img, 
+.eddie img, 
+.cheri img, 
+.charice img, 
+.keston img, 
 .tim img {
     background-size: cover;
     background-position: center;
@@ -96,31 +125,7 @@ h2,
     height: 100px;
 }
 
-.dan img {
-    background-image: url("../img/people/dan-pastor.jpg");
-}
-
-.eddie img {
-    background-image: url("../img/people/eddie.jpg");
-}
-
-.chery img {
-    background-image: url("../img/people/chery.jpg");
-}
-
-.charice img {
-    /* need one for charice */
-    background-image: url("../img/people/charice.jpg");
-}
-
-.keston img {
-    background-image: url("../img/people/keston.jpg");
-}
-
-.tim img {
-    background-image: url("../img/people/tim.jpg");
-}
-
+/* History section */
 .history {
     flex: 0 0 100%;
     max-width: 100%;
@@ -146,4 +151,9 @@ h2,
     color: white;
     text-align: center;
     border-radius: 5px;
+}
+
+/* Ensure images don't cause overflow */
+.info-container p {
+    margin: 0 5px;
 }
